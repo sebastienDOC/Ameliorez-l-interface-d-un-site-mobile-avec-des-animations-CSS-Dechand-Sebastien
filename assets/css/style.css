@@ -49,6 +49,7 @@ nav p {
   text-align: center;
 }
 .titre h1 {
+  font-weight: 700;
   margin: 40px 50px 0 50px;
 }
 .titre p {
@@ -59,7 +60,7 @@ nav p {
 }
 .titre button {
   padding: 15px 20px;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
