@@ -181,9 +181,6 @@ nav {
                 cursor: pointer;
                 & .fa-heart {
                     color: black;
-                    &:hover {
-                        color: $color-primary;
-                    }
                 }
             }
         }
@@ -247,3 +244,4 @@ footer {
         margin-right: 10px;
     }
 }
+

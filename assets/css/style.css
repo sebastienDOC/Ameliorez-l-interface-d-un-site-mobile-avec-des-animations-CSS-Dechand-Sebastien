@@ -180,9 +180,6 @@ nav p {
 .cards__txt__like label .fa-heart {
   color: black;
 }
-.cards__txt__like label .fa-heart:hover {
-  color: #9356DC;
-}
 
 @keyframes like {
   0% {
