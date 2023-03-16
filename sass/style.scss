@@ -90,7 +90,6 @@ nav {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
         border-radius: 25px;
         width: 80%;
         height: 70px;
@@ -101,9 +100,13 @@ nav {
     }
     &__txt {
         font-weight: $w-txt;
+        position: absolute;
+        left: 30%;
     }
     &__number {
         display: flex;
+        position: absolute;
+        right: 87%;
         &__numb {
             color: $white;
             position: relative;
@@ -121,6 +124,8 @@ nav {
     }
     &__icone {
         color: $color-icone;
+        position: absolute;
+        left: 20%;
         &#store {
             color: $color-primary;
         }
@@ -132,9 +137,7 @@ nav {
     border-radius: 20px;
     margin: 0 20px 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    height: 258px;
-    min-width: 0;
-    min-height: 0;
+    height: 251px;
     &__img {
         padding: 0;
         height: 70%;
@@ -159,11 +162,9 @@ nav {
         &__like {
             display: flex;
             place-content: center;
+            width: 30%;
             & input {
                 display: none;
-                position: relative;
-                left: 50%;
-                right: 50%;
                 &:checked + label .fa-heart {
                     color: $color-primary;
                     animation: like 0.5s 1;
@@ -177,7 +178,6 @@ nav {
                 align-items: center;
                 justify-content: center;
                 background: transparent;
-                position: relative;
                 cursor: pointer;
                 & .fa-heart {
                     color: black;
