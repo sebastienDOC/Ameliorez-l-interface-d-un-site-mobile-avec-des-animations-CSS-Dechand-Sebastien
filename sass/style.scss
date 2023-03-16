@@ -1,9 +1,9 @@
 @import "./utils/variables.scss";
-@import "./pages/homepage.scss";
 @import "./base/base.scss";
+@import "./composants/btn.scss";
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
-@import "./composants/btn.scss";
+@import "./pages/homepage.scss";
 
 @import "../restaurants/menu-palette.scss";
 @import "../restaurants/menu-delice.scss";
