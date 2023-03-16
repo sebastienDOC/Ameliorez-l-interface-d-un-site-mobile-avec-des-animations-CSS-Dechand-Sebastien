@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-size: "Roboto", sans-serif;
@@ -49,6 +53,20 @@ nav p {
   margin: 15px 0 5px 0;
 }
 
+.entete img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+.nom {
+  display: flex;
+  flex-direction: column;
+}
+.nom h1 {
+  margin: 0;
+}
+
 footer {
   color: #fff;
   margin-top: 50px;
@@ -88,15 +106,17 @@ footer i {
   display: flex;
   flex-direction: row;
   border-top: 2px solid #d2d2d2;
+  background: #EAEAEA;
+  justify-content: center;
 }
 .barre input {
   background: #EAEAEA;
   padding: 0;
-  border: 0;
-  width: 100%;
-  height: 48px;
-  text-align: center;
+  border: none;
+  width: 60%;
+  height: 50px;
   outline: none;
+  text-align: center;
 }
 .barre input::placeholder {
   color: black;
@@ -104,10 +124,12 @@ footer i {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
-.barre i {
-  position: absolute;
-  top: 15%;
-  left: 30%;
+.barre__icone {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  left: 10%;
 }
 
 .fonctionnement {
@@ -123,7 +145,18 @@ footer i {
   flex-direction: row;
   align-items: center;
   border-radius: 25px;
-  width: 80%;
+  height: 70px;
+  margin: 0 10% 0 10%;
+}
+.fonctionnement__btn#deguster {
+  background: #F5EDFF;
+}
+.fonctionnement__btn {
+  background: #F6F6F6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 25px;
   height: 70px;
   margin: 0 10% 0 10%;
 }
@@ -137,14 +170,15 @@ footer i {
 }
 .fonctionnement__number {
   display: flex;
-  position: absolute;
-  right: 87%;
+  position: relative;
+  right: 14px;
+  bottom: 1px;
 }
 .fonctionnement__number__numb {
   color: #fff;
   position: relative;
-  left: 16px;
-  top: 3px;
+  left: 14px;
+  top: 1px;
 }
 .fonctionnement__number__circle {
   background: #9356DC;

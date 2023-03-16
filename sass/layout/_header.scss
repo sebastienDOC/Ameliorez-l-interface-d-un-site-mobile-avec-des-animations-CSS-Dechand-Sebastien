@@ -11,3 +11,19 @@ nav {
         margin: 15px 0 5px 0;
     }
 }
+
+.entete {
+    & img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+    }
+}
+
+.nom {
+    display: flex;
+    flex-direction: column;
+    & h1 {
+        margin: 0;
+    }
+}
