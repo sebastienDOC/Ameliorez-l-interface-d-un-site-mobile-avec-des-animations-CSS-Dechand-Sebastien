@@ -80,6 +80,7 @@ nav p {
   flex-direction: column;
   gap: 20px;
   background: #fff;
+  padding: 0 0 50px 0;
 }
 .fonctionnement__btn {
   background: #F6F6F6;
@@ -222,6 +223,9 @@ footer {
 footer a {
   color: #fff;
   margin-bottom: 7px;
+}
+footer a:hover {
+  font-weight: 700;
 }
 footer p {
   margin: 0 0 15px 0;
