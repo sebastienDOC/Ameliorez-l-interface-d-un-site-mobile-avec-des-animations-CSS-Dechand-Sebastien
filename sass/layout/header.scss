@@ -1,0 +1,13 @@
+header {
+    background: $white;
+}
+
+nav {
+    display: flex;
+    place-content: center;
+    font-family: $font-title;
+    font-size: $size-title;
+    & p {
+        margin: 15px 0 5px 0;
+    }
+}

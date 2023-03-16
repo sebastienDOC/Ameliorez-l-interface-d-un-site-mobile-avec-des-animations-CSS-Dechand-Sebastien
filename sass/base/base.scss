@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-size: $font-txt;
+    font-family: $font-txt;
+    background: $color-bg;
+    font-weight: $w-p;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: $w-title;
+}
+
+h2 {
+    padding: 50px 20px 30px 20px;
+    margin: 0;
+}

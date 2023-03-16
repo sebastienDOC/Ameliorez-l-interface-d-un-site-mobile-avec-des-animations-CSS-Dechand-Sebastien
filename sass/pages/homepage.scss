@@ -1,0 +1,148 @@
+.titre {
+    text-align: center;
+    & h1 {
+        margin: 40px 50px 0 50px;
+    }
+    & p {
+        margin: 15px 30px 0 30px;
+    }
+}
+
+.barre {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid $color-border;
+    & input {
+        background: $color-search ;
+        padding: 0;
+        border: 0;
+        width: 100%;
+        height: 48px;
+        text-align: center;
+        outline: none;
+        &::placeholder {
+            color: black;
+            opacity: 1;  
+            font-family: $font-txt;
+            font-weight: $w-txt;
+        }
+    }
+    & i {
+        position: absolute;
+        top: 9.5%;
+        left: 30%;
+    }
+}
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: $white;
+    padding: 0 0 50px 0;
+    &__btn {
+        background: $color-fct;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 25px;
+        width: 80%;
+        height: 70px;
+        margin: 0 10% 0 10%;
+        &#deguster {
+            background: #F5EDFF;
+        }
+    }
+    &__txt {
+        font-weight: $w-txt;
+        position: absolute;
+        left: 30%;
+    }
+    &__number {
+        display: flex;
+        position: absolute;
+        right: 87%;
+        &__numb {
+            color: $white;
+            position: relative;
+            left: 16px;
+            top: 3px;
+        }
+        &__circle {
+            background: $color-primary;
+            border: 2px solid $color-primary;
+            min-width: 20px;
+            min-height: 20px;
+            border-radius: 50%;
+    
+        }
+    }
+    &__icone {
+        color: $color-icone;
+        position: absolute;
+        left: 20%;
+        &#store {
+            color: $color-primary;
+        }
+    }
+}
+
+.cards {
+    border-radius: 20px;
+    margin: 0 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 251px;
+    &__img {
+        padding: 0;
+        height: 70%;
+        & img {
+            border-radius: 20px 20px 0 0;
+        }
+    }
+    &__txt {
+        display: flex;
+        height: 30%;
+        &__name {
+            width: 80%;
+            & h3 {
+                margin: 0;
+                padding: 15px 0 5px 10px;
+            }
+            & p {
+                margin: 0;
+                padding: 0 0 0 10px;
+            }
+        }
+        &__like {
+            display: flex;
+            place-content: center;
+            width: 30%;
+            & input {
+                display: none;
+                &:checked + label .fa-heart {
+                    color: $color-primary;
+                    animation: like 0.5s 1;
+                }
+                &:not(:checked) + label .fa-heart {
+                    animation: dislike 0.5s 1;
+                }
+            }
+            & label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                cursor: pointer;
+                & .fa-heart {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
