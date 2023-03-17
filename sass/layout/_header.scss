@@ -7,6 +7,7 @@ nav {
     place-content: center;
     font-family: $font-title;
     font-size: $size-title;
+    background: $white;
     & p {
         margin: 15px 0 5px 0;
     }
@@ -17,13 +18,21 @@ nav {
         width: 100%;
         height: 275px;
         object-fit: cover;
+        position: absolute;
+        z-index: 1;
     }
 }
 
 .nom {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 20px 40px 20px;
     & h1 {
         margin: 0;
+        font-family: $font-title;
+        font-weight: $w-logo;
+        font-size: $size-nom;
     }
 }
