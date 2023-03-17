@@ -1,18 +1,50 @@
+nav {
+    display: flex;
+    align-items: center;
+    & i {
+        position: absolute;
+        right: 90%;
+        color: $color-footer;
+    }
+}
+
 .entrees,
 .plats,
 .desserts {
-    padding: 0 0 15px 15px;
+    padding: 0 0 40px 15px;
     & .fonctionnement__btn {
         display: flex;
         justify-content: space-between;
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
         background: $white;
-        margin: 15px;
-        & h3 {
-            margin: 0;
+        margin: 15px 15px 15px 0;
+        padding: 12px;
+        height: auto;
+        &__name {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            & h3 {
+                font-size: $size-logo;
+                margin: 0 0 5px 0;
+            }
         }
         & p {
+            font-size: $size-p-menu;
             margin: 0;
         }
+        &__prix {
+            font-weight: $w-title;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            width: 10%;
+            height: 100%;
+            min-height: 45px;
+        }
     }
+}
+
+.titre__btn {
+    margin: auto;
 }

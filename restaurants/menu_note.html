@@ -12,7 +12,10 @@
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="nav">
+                <a href="../index.html">
+                    <i class="fa-solid fa-arrow-left fa-xs"></i>
+                </a>
                 <p>ohmyfood</p>
             </nav>
             <div class="entete">
@@ -24,7 +27,12 @@
                 <section>
                     <div class="nom">
                         <div><h1>La note enchantée</h1></div>
-                        <div><i class="fa-regular fa-heart fa-xl"></i></div>
+                        <div class="cards__txt__like">
+                            <input type="checkbox" id="liked1">
+                            <label for="liked1">
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </label>
+                        </div>
                     </div>
                 </section>
                 <section class="entrees">
@@ -32,8 +40,8 @@
                         <a href="#">
                             <div class="fonctionnement__btn">
                                 <div class="fonctionnement__btn__name">
-                                    <h3>Fricassée d'escargots</h3>
-                                    <p>Au piment d'Espelette </p>
+                                    <h3>Ravioles de foie gras</h3>
+                                    <p>Accompagnées de leur crème à la truffe</p>
                                 </div>
                                 <div class="fonctionnement__btn__prix">
                                     <p>25€</p>
@@ -43,22 +51,33 @@
                         <a href="#">
                             <div class="fonctionnement__btn">
                                 <div class="fonctionnement__btn__name">
-                                    <h3>Fricassée d'escargots</h3>
-                                    <p>Au piment d'Espelette </p>
+                                    <h3>Caviar osciètre</h3>
+                                    <p>Sur blini à la farine de blé noir</p>
                                 </div>
                                 <div class="fonctionnement__btn__prix">
-                                    <p>25€</p>
+                                    <p>35€</p>
                                 </div>
                             </div>
                         </a>
                         <a href="#">
                             <div class="fonctionnement__btn">
                                 <div class="fonctionnement__btn__name">
-                                    <h3>Fricassée d'escargots</h3>
-                                    <p>Au piment d'Espelette </p>
+                                    <h3>Homard et espuma de potiron</h3>
+                                    <p>Marinés aux zestes d'orange</p>
                                 </div>
                                 <div class="fonctionnement__btn__prix">
-                                    <p>25€</p>
+                                    <p>20€</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="fonctionnement__btn">
+                                <div class="fonctionnement__btn__name">
+                                    <h3>Foie gras de canard cuit entier</h3>
+                                    <p>Confiture de figue et pain toasté</p>
+                                </div>
+                                <div class="fonctionnement__btn__prix">
+                                    <p>35€</p>
                                 </div>
                             </div>
                         </a>
@@ -68,74 +87,78 @@
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Noix de coquilles Saint-Jacques</h3>
+                                <p>Sur lit de purée de céleri-rave</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>40€</p>
                             </div>
                         </div>
                     </a>                        
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Langoustine poêlée</h3>
+                                <p>Purée de patate douce</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>35€</p>
                             </div>
                         </div>
                     </a>                        
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Mijoté de queue de bœuf</h3>
+                                <p>Et riz sauvage aux zestes de citron</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>44€</p>
                             </div>
                         </div>
                     </a>
                 </section>
                 <section class="desserts">
-                    <h2>Desserts</h2>
+                    <h2>Desserts</h2>                        
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Macaron noisette et chocolat</h3>
+                                <p>Glace au caramel brun et sel de Guérande</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>18€</p>
                             </div>
                         </div>
                     </a>                        
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Baba au rhum revisité</h3>
+                                <p>Avec son coulis de citron</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>22€</p>
                             </div>
                         </div>
-                    </a>                        
+                    </a>
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Tarte au citron meringuée</h3>
+                                <p>Déstructurée</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>23€</p>
                             </div>
                         </div>
                     </a>
                 </section>
-                <div class="bouton"></div>
+                <div class="titre__btn">
+                    <button class="btn" type="button">
+                        Commander
+                    </button>
+                </div>
             </main>
             <footer>
                 <p>ohmyfood</p>

@@ -40,18 +40,23 @@ main h2 {
 }
 
 .titre__btn {
-  margin: 25px 75px 50px 75px;
+  margin: 30px 0 50px 0;
+  width: 220px;
+  height: 50px;
 }
-.titre button {
+.titre__btn button {
   padding: 15px 20px;
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   color: #fff;
+  font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   border: transparent;
   cursor: pointer;
   border-radius: 40px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -90,6 +95,9 @@ nav p {
   font-weight: 400;
   font-size: 28px;
 }
+.nom .cards__txt__like {
+  width: 10%;
+}
 
 footer {
   color: #fff;
@@ -117,13 +125,18 @@ footer i {
 }
 
 .titre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding-bottom: 50px;
 }
 .titre h1 {
   margin: 40px 50px 0 50px;
 }
 .titre p {
-  margin: 15px 30px 0 30px;
+  margin: 15px 30px 30px 30px;
 }
 
 .barre {
@@ -244,10 +257,12 @@ footer i {
   width: 80%;
 }
 .cards__txt__name h3 {
+  font-size: 18px;
   margin: 0;
   padding: 15px 0 5px 10px;
 }
 .cards__txt__name p {
+  font-size: 17px;
   margin: 0;
   padding: 0 0 0 10px;
 }
@@ -277,10 +292,20 @@ footer i {
   color: black;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+nav i {
+  position: absolute;
+  right: 90%;
+  color: #353535;
+}
+
 .entrees,
 .plats,
 .desserts {
-  padding: 0 0 15px 15px;
+  padding: 0 0 40px 15px;
 }
 .entrees .fonctionnement__btn,
 .plats .fonctionnement__btn,
@@ -289,17 +314,43 @@ footer i {
   justify-content: space-between;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   background: #fff;
-  margin: 15px;
+  margin: 15px 15px 15px 0;
+  padding: 12px;
+  height: auto;
 }
-.entrees .fonctionnement__btn h3,
-.plats .fonctionnement__btn h3,
-.desserts .fonctionnement__btn h3 {
-  margin: 0;
+.entrees .fonctionnement__btn__name,
+.plats .fonctionnement__btn__name,
+.desserts .fonctionnement__btn__name {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.entrees .fonctionnement__btn__name h3,
+.plats .fonctionnement__btn__name h3,
+.desserts .fonctionnement__btn__name h3 {
+  font-size: 18px;
+  margin: 0 0 5px 0;
 }
 .entrees .fonctionnement__btn p,
 .plats .fonctionnement__btn p,
 .desserts .fonctionnement__btn p {
+  font-size: 15px;
   margin: 0;
+}
+.entrees .fonctionnement__btn__prix,
+.plats .fonctionnement__btn__prix,
+.desserts .fonctionnement__btn__prix {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 10%;
+  height: 100%;
+  min-height: 45px;
+}
+
+.titre__btn {
+  margin: auto;
 }
 
 @keyframes like {

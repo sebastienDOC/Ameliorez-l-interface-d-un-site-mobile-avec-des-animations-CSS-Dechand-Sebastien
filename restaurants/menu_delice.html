@@ -12,7 +12,10 @@
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="nav">
+                <a href="../index.html">
+                    <i class="fa-solid fa-arrow-left fa-xs"></i>
+                </a>
                 <p>ohmyfood</p>
             </nav>
             <div class="entete">
@@ -24,7 +27,12 @@
                 <section>
                     <div class="nom">
                         <div><h1>Le délice des sens</h1></div>
-                        <div><i class="fa-regular fa-heart fa-xl"></i></div>
+                        <div class="cards__txt__like">
+                            <input type="checkbox" id="liked1">
+                            <label for="liked1">
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </label>
+                        </div>
                     </div>
                 </section>
                 <section class="entrees">
@@ -32,8 +40,8 @@
                         <a href="#">
                             <div class="fonctionnement__btn">
                                 <div class="fonctionnement__btn__name">
-                                    <h3>Fricassée d'escargots</h3>
-                                    <p>Au piment d'Espelette </p>
+                                    <h3>Tartare de thon</h3>
+                                    <p>Assaisonné au yuzu</p>
                                 </div>
                                 <div class="fonctionnement__btn__prix">
                                     <p>25€</p>
@@ -43,22 +51,22 @@
                         <a href="#">
                             <div class="fonctionnement__btn">
                                 <div class="fonctionnement__btn__name">
-                                    <h3>Fricassée d'escargots</h3>
-                                    <p>Au piment d'Espelette </p>
+                                    <h3>Bouchée de homard croustillant</h3>
+                                    <p>Et sa farandole de petits légumes</p>
                                 </div>
                                 <div class="fonctionnement__btn__prix">
-                                    <p>25€</p>
+                                    <p>35€</p>
                                 </div>
                             </div>
                         </a>
                         <a href="#">
                             <div class="fonctionnement__btn">
                                 <div class="fonctionnement__btn__name">
-                                    <h3>Fricassée d'escargots</h3>
-                                    <p>Au piment d'Espelette </p>
+                                    <h3>Velouté de cèpes</h3>
+                                    <p>Aux truffes</p>
                                 </div>
                                 <div class="fonctionnement__btn__prix">
-                                    <p>25€</p>
+                                    <p>20€</p>
                                 </div>
                             </div>
                         </a>
@@ -68,74 +76,78 @@
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Poulet rôti aux herbes de Provence</h3>
+                                <p>Et sa crème de truffe</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>40€</p>
                             </div>
                         </div>
                     </a>                        
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Langouste rôtie </h3>
+                                <p>Et ses légumes de saison</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>35€</p>
                             </div>
                         </div>
                     </a>                        
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Côte de bœuf Angus</h3>
+                                <p>Et sa purée de panais</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>44€</p>
                             </div>
                         </div>
                     </a>
                 </section>
                 <section class="desserts">
-                    <h2>Desserts</h2>
+                    <h2>Desserts</h2>                        
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Farandole de desserts</h3>
+                                <p>Du chef</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>18€</p>
                             </div>
                         </div>
                     </a>                        
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Crème brulée</h3>
+                                <p>Revisitée</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>22€</p>
                             </div>
                         </div>
-                    </a>                        
+                    </a>
                     <a href="#">
                         <div class="fonctionnement__btn">
                             <div class="fonctionnement__btn__name">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
+                                <h3>Tiramisu</h3>
+                                <p>À la noisette</p>
                             </div>
                             <div class="fonctionnement__btn__prix">
-                                <p>25€</p>
+                                <p>23€</p>
                             </div>
                         </div>
                     </a>
                 </section>
-                <div class="bouton"></div>
+                <div class="titre__btn">
+                    <button class="btn" type="button">
+                        Commander
+                    </button>
+                </div>
             </main>
             <footer>
                 <p>ohmyfood</p>

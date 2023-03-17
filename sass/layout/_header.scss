@@ -35,4 +35,7 @@ nav {
         font-weight: $w-logo;
         font-size: $size-nom;
     }
+    & .cards__txt__like {
+        width: 10%;
+    }
 }
