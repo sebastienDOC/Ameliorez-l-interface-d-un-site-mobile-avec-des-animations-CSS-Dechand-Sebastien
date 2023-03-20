@@ -28,15 +28,6 @@ nav {
     }
 }
 
-main {
-    & h2 {
-        padding: 0;
-        border-bottom: 3px solid $color-tertiary;
-        width: 40px;
-    }
-
-}
-
 .container__menu {
     background: $color-fct;
     width: 100%;
@@ -44,9 +35,15 @@ main {
     top: 275px;
     z-index: 2;
     border-radius: 50px 50px 0 0;
+    & h2 {
+        padding: 0;
+        border-bottom: 3px solid $color-tertiary;
+        width: 40px;
+    }
     @include desktop-only {
         width: 75%;
         margin: 0 12.5%;
+        top: 450px;
     }
 }
 
@@ -55,7 +52,7 @@ main {
 .desserts {
     padding: 0 0 40px 15px;
     @include desktop-only {
-        margin: 0 24%;
+        margin: 0 20% 40px;
         padding: 0;
         width: auto;
     }
@@ -94,7 +91,4 @@ main {
 
 .titre__btn {
     margin: auto;
-    @include desktop-only {
-        margin-top: 40px;
-    }
 }

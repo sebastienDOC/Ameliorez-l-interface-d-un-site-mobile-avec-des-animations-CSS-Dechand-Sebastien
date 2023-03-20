@@ -22,6 +22,8 @@ h1 {
 h2 {
   padding: 50px 20px 30px 20px;
   margin: 0;
+  font-size: 16px;
+  font-weight: 300;
 }
 @media screen and (min-width: 1024px) {
   h2 {
@@ -76,6 +78,11 @@ nav p {
   position: absolute;
   z-index: 1;
 }
+@media screen and (min-width: 1024px) {
+  .entete img {
+    height: 425px;
+  }
+}
 
 footer {
   color: #fff;
@@ -111,10 +118,7 @@ footer i {
     justify-content: flex-end;
     margin-top: 80px;
     padding: 50px;
-    width: 150%;
-    position: relative;
-    right: 30%;
-    z-index: 3;
+    width: 100%;
   }
   footer a {
     margin-bottom: 0;
@@ -131,6 +135,11 @@ footer i {
     align-items: center;
     gap: 40px;
   }
+}
+
+.container__index h2 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .titre {
@@ -399,12 +408,6 @@ nav i {
   }
 }
 
-main h2 {
-  padding: 0;
-  border-bottom: 3px solid #99E2D0;
-  width: 40px;
-}
-
 .container__menu {
   background: #F6F6F6;
   width: 100%;
@@ -413,10 +416,16 @@ main h2 {
   z-index: 2;
   border-radius: 50px 50px 0 0;
 }
+.container__menu h2 {
+  padding: 0;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+}
 @media screen and (min-width: 1024px) {
   .container__menu {
     width: 75%;
     margin: 0 12.5%;
+    top: 450px;
   }
 }
 
@@ -429,7 +438,7 @@ main h2 {
   .entrees,
   .plats,
   .desserts {
-    margin: 0 24%;
+    margin: 0 20% 40px;
     padding: 0;
     width: auto;
   }
@@ -478,11 +487,6 @@ main h2 {
 
 .titre__btn {
   margin: auto;
-}
-@media screen and (min-width: 1024px) {
-  .titre__btn {
-    margin-top: 40px;
-  }
 }
 
 @keyframes like {

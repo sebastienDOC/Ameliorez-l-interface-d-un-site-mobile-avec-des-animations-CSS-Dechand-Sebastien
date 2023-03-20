@@ -23,5 +23,8 @@ nav {
         object-fit: cover;
         position: absolute;
         z-index: 1;
+        @include desktop-only {
+            height: 425px;
+        }
     }
 }

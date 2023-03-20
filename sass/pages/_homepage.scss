@@ -1,3 +1,10 @@
+.container__index {
+    & h2 {
+        font-size: $size-subtitle;
+        font-weight: $w-title;
+    }
+}
+
 .titre {
     display: flex;
     flex-direction: column;
