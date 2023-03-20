@@ -10,15 +10,6 @@ body {
   font-weight: 300;
 }
 
-.container__menu {
-  background: #F6F6F6;
-  width: 100%;
-  position: absolute;
-  top: 275px;
-  z-index: 2;
-  border-radius: 50px 50px 0 0;
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -36,12 +27,6 @@ h2 {
   h2 {
     padding: 50px 0 30px 0;
   }
-}
-
-main h2 {
-  padding: 0;
-  border-bottom: 3px solid #99E2D0;
-  width: 40px;
 }
 
 .titre__btn {
@@ -92,23 +77,6 @@ nav p {
   z-index: 1;
 }
 
-.nom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 50px 20px 40px 20px;
-}
-.nom h1 {
-  margin: 0;
-  font-family: "Shrikhand", cursive;
-  font-weight: 400;
-  font-size: 28px;
-}
-.nom .cards__txt__like {
-  width: 10%;
-}
-
 footer {
   color: #fff;
   margin-top: 50px;
@@ -143,12 +111,16 @@ footer i {
     justify-content: flex-end;
     margin-top: 80px;
     padding: 50px;
+    width: 150%;
+    position: relative;
+    right: 30%;
+    z-index: 3;
   }
   footer a {
     margin-bottom: 0;
   }
   footer p {
-    margin: 0 0 0 50px;
+    margin: 0 50px 0 50px;
   }
   footer .logo__footer {
     order: 2;
@@ -305,7 +277,7 @@ footer i {
 
 @media screen and (min-width: 1024px) {
   .restaurants {
-    padding: 0 14%;
+    padding-left: 14%;
   }
   .restaurants__flex {
     display: flex;
@@ -405,10 +377,62 @@ nav i {
   color: #353535;
 }
 
+.nom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 20px 40px 20px;
+}
+.nom h1 {
+  margin: 0;
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 28px;
+}
+.nom .cards__txt__like {
+  width: 10%;
+}
+@media screen and (min-width: 1024px) {
+  .nom {
+    justify-content: center;
+  }
+}
+
+main h2 {
+  padding: 0;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+}
+
+.container__menu {
+  background: #F6F6F6;
+  width: 100%;
+  position: absolute;
+  top: 275px;
+  z-index: 2;
+  border-radius: 50px 50px 0 0;
+}
+@media screen and (min-width: 1024px) {
+  .container__menu {
+    width: 75%;
+    margin: 0 12.5%;
+  }
+}
+
 .entrees,
 .plats,
 .desserts {
   padding: 0 0 40px 15px;
+}
+@media screen and (min-width: 1024px) {
+  .entrees,
+  .plats,
+  .desserts {
+    margin: 0 24%;
+    padding: 0;
+    width: auto;
+  }
 }
 .entrees .fonctionnement__btn,
 .plats .fonctionnement__btn,
@@ -454,6 +478,11 @@ nav i {
 
 .titre__btn {
   margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  .titre__btn {
+    margin-top: 40px;
+  }
 }
 
 @keyframes like {

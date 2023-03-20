@@ -8,10 +8,57 @@ nav {
     }
 }
 
+.nom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 20px 40px 20px;
+    & h1 {
+        margin: 0;
+        font-family: $font-title;
+        font-weight: $w-logo;
+        font-size: $size-nom;
+    }
+    & .cards__txt__like {
+        width: 10%;
+    }
+    @include desktop-only {
+        justify-content: center;
+    }
+}
+
+main {
+    & h2 {
+        padding: 0;
+        border-bottom: 3px solid $color-tertiary;
+        width: 40px;
+    }
+
+}
+
+.container__menu {
+    background: $color-fct;
+    width: 100%;
+    position: absolute;
+    top: 275px;
+    z-index: 2;
+    border-radius: 50px 50px 0 0;
+    @include desktop-only {
+        width: 75%;
+        margin: 0 12.5%;
+    }
+}
+
 .entrees,
 .plats,
 .desserts {
     padding: 0 0 40px 15px;
+    @include desktop-only {
+        margin: 0 24%;
+        padding: 0;
+        width: auto;
+    }
     & .fonctionnement__btn {
         display: flex;
         justify-content: space-between;
@@ -47,4 +94,7 @@ nav {
 
 .titre__btn {
     margin: auto;
+    @include desktop-only {
+        margin-top: 40px;
+    }
 }
