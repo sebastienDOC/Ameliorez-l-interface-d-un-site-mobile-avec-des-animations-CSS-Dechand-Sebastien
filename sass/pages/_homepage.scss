@@ -7,9 +7,15 @@
     padding-bottom: 50px;
     & h1 {
         margin: 40px 50px 0 50px;
+        @include desktop-only {
+            font-size: $size-title-desktop;
+        }
     }
     & p {
         margin: 15px 30px 30px 30px;
+        @include desktop-only {
+            font-size: $size-logo;
+        }
     }
 }
 
@@ -44,22 +50,14 @@
 }
 
 .fonctionnement {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     background: $white;
-    padding: 0 0 50px 0;
-    &__btn {
-        background: $color-fct;
+    position: relative;
+    &__flex {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        border-radius: 25px;
-        height: 70px;
-        margin: 0 10% 0 10%;
-        &#deguster {
-            background: #F5EDFF;
-        }
+        flex-direction: column;
+        gap: 20px;
+        background: $white;
+        padding: 0 0 50px 0;
     }
     &__btn {
         background: $color-fct;
@@ -106,6 +104,41 @@
             color: $color-primary;
         }
     }
+    @include desktop-only{
+        padding: 0 14% 80px 14%;
+        & h2 {
+            margin: 0;
+        }
+        &__flex {
+            flex-direction: row;
+            gap: 3%;
+            padding: 0;
+        }
+        &__btn {
+            width: 100%;
+            margin: 0;
+        }
+        &__txt {
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 0 20px;
+            margin: auto;
+            text-align: center;
+        }
+        &__icone{
+            position: relative;
+            top: 0;
+            left: 0;
+            padding-left: 10px;
+        }
+    }
+}
+
+.restaurants {
+    @include desktop-only {
+        padding: 0 14%;
+    }
 }
 
 .cards {
@@ -113,6 +146,23 @@
     margin: 0 20px 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     height: 251px;
+    position: relative;
+    &__new {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: $w-txt;
+        font-size: $size-new;
+        width: 20%;
+        height: 30px;
+        background: $color-tertiary;
+        color: $color-new;
+        border-radius: 2px;
+        z-index: 1;
+        position: absolute;
+        top: 5%;
+        left: 76%;
+    }
     &__img {
         padding: 0;
         height: 70%;

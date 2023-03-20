@@ -32,6 +32,11 @@ h2 {
   padding: 50px 20px 30px 20px;
   margin: 0;
 }
+@media screen and (min-width: 1024px) {
+  h2 {
+    padding: 50px 0 30px 0;
+  }
+}
 
 main h2 {
   padding: 0;
@@ -73,6 +78,11 @@ nav {
 nav p {
   margin: 15px 0 5px 0;
 }
+@media screen and (min-width: 1024px) {
+  nav {
+    font-size: 37px;
+  }
+}
 
 .entete img {
   width: 100%;
@@ -107,6 +117,10 @@ footer {
   flex-direction: column;
   background: #353535;
 }
+footer .nav__footer {
+  display: flex;
+  flex-direction: column;
+}
 footer a {
   color: #fff;
   margin-bottom: 7px;
@@ -123,6 +137,29 @@ footer p {
 footer i {
   margin-right: 10px;
 }
+@media screen and (min-width: 1024px) {
+  footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 80px;
+    padding: 50px;
+  }
+  footer a {
+    margin-bottom: 0;
+  }
+  footer p {
+    margin: 0 0 0 50px;
+  }
+  footer .logo__footer {
+    order: 2;
+  }
+  footer .nav__footer {
+    order: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+}
 
 .titre {
   display: flex;
@@ -135,8 +172,18 @@ footer i {
 .titre h1 {
   margin: 40px 50px 0 50px;
 }
+@media screen and (min-width: 1024px) {
+  .titre h1 {
+    font-size: 40px;
+  }
+}
 .titre p {
   margin: 15px 30px 30px 30px;
+}
+@media screen and (min-width: 1024px) {
+  .titre p {
+    font-size: 18px;
+  }
 }
 
 .barre {
@@ -170,23 +217,15 @@ footer i {
 }
 
 .fonctionnement {
+  background: #fff;
+  position: relative;
+}
+.fonctionnement__flex {
   display: flex;
   flex-direction: column;
   gap: 20px;
   background: #fff;
   padding: 0 0 50px 0;
-}
-.fonctionnement__btn {
-  background: #F6F6F6;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 25px;
-  height: 70px;
-  margin: 0 10% 0 10%;
-}
-.fonctionnement__btn#deguster {
-  background: #F5EDFF;
 }
 .fonctionnement__btn {
   background: #F6F6F6;
@@ -232,12 +271,66 @@ footer i {
 .fonctionnement__icone#store {
   color: #9356DC;
 }
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    padding: 0 14% 80px 14%;
+  }
+  .fonctionnement h2 {
+    margin: 0;
+  }
+  .fonctionnement__flex {
+    flex-direction: row;
+    gap: 3%;
+    padding: 0;
+  }
+  .fonctionnement__btn {
+    width: 100%;
+    margin: 0;
+  }
+  .fonctionnement__txt {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    margin: auto;
+    text-align: center;
+  }
+  .fonctionnement__icone {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    padding: 0 14%;
+  }
+}
 
 .cards {
   border-radius: 20px;
   margin: 0 20px 20px 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   height: 251px;
+  position: relative;
+}
+.cards__new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  width: 20%;
+  height: 30px;
+  background: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  z-index: 1;
+  position: absolute;
+  top: 5%;
+  left: 76%;
 }
 .cards__img {
   padding: 0;

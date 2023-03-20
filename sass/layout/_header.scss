@@ -11,6 +11,9 @@ nav {
     & p {
         margin: 15px 0 5px 0;
     }
+    @include desktop-only {
+        font-size: $size-nom-desktop;
+    }
 }
 
 .entete {

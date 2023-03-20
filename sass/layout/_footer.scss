@@ -5,6 +5,10 @@ footer {
     display: flex;
     flex-direction: column;
     background: $color-footer;
+    & .nav__footer {
+        display: flex;
+        flex-direction: column;
+    }
     & a {
         color: $white;
         margin-bottom: 7px;
@@ -20,5 +24,27 @@ footer {
     }
     & i {
         margin-right: 10px;
+    }
+    @include desktop-only {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 80px;
+        padding: 50px;
+        & a {
+            margin-bottom: 0;
+        }
+        & p {
+            margin: 0 0 0 50px;
+        }
+        & .logo__footer {
+            order: 2;
+        }
+        & .nav__footer {
+            order: 1;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+
+        }
     }
 }
