@@ -307,6 +307,11 @@ footer i {
   .restaurants {
     padding: 0 14%;
   }
+  .restaurants__flex {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+  }
 }
 
 .cards {
@@ -383,6 +388,11 @@ footer i {
 }
 .cards__txt__like label .fa-heart {
   color: black;
+}
+@media screen and (min-width: 1024px) {
+  .cards {
+    width: 335px;
+  }
 }
 
 nav {
