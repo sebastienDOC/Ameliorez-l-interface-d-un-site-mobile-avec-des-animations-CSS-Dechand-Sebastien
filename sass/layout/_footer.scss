@@ -1,10 +1,10 @@
 footer {
-    color: $white;
-    margin-top: 50px;
-    padding: 25px 0 30px 25px;
     display: flex;
     flex-direction: column;
     background: $color-footer;
+    color: $white;
+    margin-top: 50px;
+    padding: 25px 0 30px 25px;
     & .nav__footer {
         display: flex;
         flex-direction: column;
@@ -48,4 +48,10 @@ footer {
 
         }
     }
+}
+
+.test {
+    width: 150%;
+    position: relative;
+    right: 33%;
 }

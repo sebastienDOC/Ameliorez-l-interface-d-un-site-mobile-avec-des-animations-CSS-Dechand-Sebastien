@@ -53,6 +53,9 @@
         align-items: center;
         position: relative;
         left: 10%;
+        @include desktop-only {
+            left: 23%;
+        }
     }
 }
 
@@ -204,16 +207,19 @@
         }
         &__like {
             display: flex;
-            place-content: center;
-            width: 30%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            position: relative;
+            cursor: pointer;
             & input {
                 display: none;
-                &:checked + label .fa-heart {
-                    color: $color-primary;
-                    animation: like 0.5s 1;
+                &:checked + label .heart-full {
+                    animation: like 1s ease-in-out forwards;
                 }
-                &:not(:checked) + label .fa-heart {
-                    animation: dislike 0.5s 1;
+                &:not(:checked) + label .heart-full {
+                    animation: dislike 1s forwards;
                 }
             }
             & label {
@@ -222,13 +228,30 @@
                 justify-content: center;
                 background: transparent;
                 cursor: pointer;
-                & .fa-heart {
-                    color: black;
+            }
+            & i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 24px;
+            }
+            & .heart-full {
+                opacity: 0;
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                color: transparent;
+                background-image: linear-gradient($color-primary, $color-secondary);
+                background-clip: text;
+                -webkit-background-clip: text;
+                transform-origin: bottom;
+                &:active {
+                    animation: like 1s ease-in-out forwards;
                 }
             }
         }
     }
-    @include desktop-only {
-        width: 335px;
-    }
+        @include desktop-only {
+            width: 335px;
+        }
 }
