@@ -56,14 +56,17 @@ nav {
         padding: 0;
         width: auto;
     }
-    & .fonctionnement__btn {
+    & .menu__btn {
         display: flex;
         justify-content: space-between;
-        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        box-shadow: $shadow-cards;
         background: $white;
+        border-radius: 15px;
         margin: 15px 15px 15px 0;
         padding: 12px;
         height: auto;
+        opacity: 0;
+        animation: apparition 2s ease 1 forwards;
         &__name {
             display: flex;
             flex-direction: column;
@@ -87,8 +90,52 @@ nav {
             min-height: 45px;
         }
     }
+    .anim {
+        &__1 {
+            animation-delay: 0.2s;
+        }
+        &__2 {
+            animation-delay: 0.4s;
+        }
+        &__3 {
+            animation-delay: 0.6s;
+        }
+        &__4 {
+            animation-delay: 0.8s;
+        }
+        &__5 {
+            animation-delay: 1s;
+        }
+        &__6 {
+            animation-delay: 1.2s;
+        }
+        &__7 {
+            animation-delay: 1.4s;
+        }
+        &__8 {
+            animation-delay: 1.6s;
+        }
+        &__9 {
+            animation-delay: 1.8s;
+        }
+        &__10 {
+            animation-delay: 2s;
+        }
+    }
 }
+
+
 
 .titre__btn {
     margin: auto;
+}
+
+@keyframes apparition {
+    0% {
+        transform: translateX(-100vh);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

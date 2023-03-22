@@ -24,7 +24,14 @@
             font-size: $size-logo;
         }
     }
+    &__btn {
+        margin: 30px 0 50px 0;
+        width: 220px;
+        height: 50px;
+        z-index: 1;
+    }
 }
+
 
 .barre {
     display: flex;
@@ -250,6 +257,28 @@
         @include desktop-only {
             width: 335px;
         }
+}
+
+@keyframes like {
+    0% {
+        transform: scale(0);
+      }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    
+}
+
+@keyframes dislike {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    100% {
+        transform: scale(0);
+      }
+    
 }
 
 .block {

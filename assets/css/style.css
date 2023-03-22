@@ -31,14 +31,9 @@ h2 {
   }
 }
 
-.titre__btn {
-  margin: 30px 0 50px 0;
-  width: 220px;
-  height: 50px;
-}
-.titre__btn button {
+button {
   padding: 15px 20px;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(350deg, #9356DC, 60%, #FF79DA);
   color: #fff;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -50,7 +45,19 @@ h2 {
   width: 100%;
   height: 100%;
 }
+button:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  animation: bouton 0.3s ease forwards;
+}
 
+@keyframes bouton {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
 header {
   background: #fff;
 }
@@ -137,7 +144,7 @@ footer i {
   }
 }
 
-.test {
+.footer__menus {
   width: 150%;
   position: relative;
   right: 33%;
@@ -171,6 +178,12 @@ footer i {
   .titre p {
     font-size: 18px;
   }
+}
+.titre__btn {
+  margin: 30px 0 50px 0;
+  width: 220px;
+  height: 50px;
+  z-index: 1;
 }
 
 .barre {
@@ -405,6 +418,24 @@ footer i {
   }
 }
 
+@keyframes like {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes dislike {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .block {
   width: 100%;
   height: 100vh;
@@ -529,39 +560,42 @@ nav i {
     width: auto;
   }
 }
-.entrees .fonctionnement__btn,
-.plats .fonctionnement__btn,
-.desserts .fonctionnement__btn {
+.entrees .menu__btn,
+.plats .menu__btn,
+.desserts .menu__btn {
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   background: #fff;
+  border-radius: 15px;
   margin: 15px 15px 15px 0;
   padding: 12px;
   height: auto;
+  opacity: 0;
+  animation: apparition 2s ease 1 forwards;
 }
-.entrees .fonctionnement__btn__name,
-.plats .fonctionnement__btn__name,
-.desserts .fonctionnement__btn__name {
+.entrees .menu__btn__name,
+.plats .menu__btn__name,
+.desserts .menu__btn__name {
   display: flex;
   flex-direction: column;
   width: 85%;
 }
-.entrees .fonctionnement__btn__name h3,
-.plats .fonctionnement__btn__name h3,
-.desserts .fonctionnement__btn__name h3 {
+.entrees .menu__btn__name h3,
+.plats .menu__btn__name h3,
+.desserts .menu__btn__name h3 {
   font-size: 18px;
   margin: 0 0 5px 0;
 }
-.entrees .fonctionnement__btn p,
-.plats .fonctionnement__btn p,
-.desserts .fonctionnement__btn p {
+.entrees .menu__btn p,
+.plats .menu__btn p,
+.desserts .menu__btn p {
   font-size: 15px;
   margin: 0;
 }
-.entrees .fonctionnement__btn__prix,
-.plats .fonctionnement__btn__prix,
-.desserts .fonctionnement__btn__prix {
+.entrees .menu__btn__prix,
+.plats .menu__btn__prix,
+.desserts .menu__btn__prix {
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -570,26 +604,67 @@ nav i {
   height: 100%;
   min-height: 45px;
 }
+.entrees .anim__1,
+.plats .anim__1,
+.desserts .anim__1 {
+  animation-delay: 0.2s;
+}
+.entrees .anim__2,
+.plats .anim__2,
+.desserts .anim__2 {
+  animation-delay: 0.4s;
+}
+.entrees .anim__3,
+.plats .anim__3,
+.desserts .anim__3 {
+  animation-delay: 0.6s;
+}
+.entrees .anim__4,
+.plats .anim__4,
+.desserts .anim__4 {
+  animation-delay: 0.8s;
+}
+.entrees .anim__5,
+.plats .anim__5,
+.desserts .anim__5 {
+  animation-delay: 1s;
+}
+.entrees .anim__6,
+.plats .anim__6,
+.desserts .anim__6 {
+  animation-delay: 1.2s;
+}
+.entrees .anim__7,
+.plats .anim__7,
+.desserts .anim__7 {
+  animation-delay: 1.4s;
+}
+.entrees .anim__8,
+.plats .anim__8,
+.desserts .anim__8 {
+  animation-delay: 1.6s;
+}
+.entrees .anim__9,
+.plats .anim__9,
+.desserts .anim__9 {
+  animation-delay: 1.8s;
+}
+.entrees .anim__10,
+.plats .anim__10,
+.desserts .anim__10 {
+  animation-delay: 2s;
+}
 
 .titre__btn {
   margin: auto;
 }
 
-@keyframes like {
+@keyframes apparition {
   0% {
-    transform: scale(0);
+    transform: translateX(-100vh);
   }
   100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-@keyframes dislike {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
