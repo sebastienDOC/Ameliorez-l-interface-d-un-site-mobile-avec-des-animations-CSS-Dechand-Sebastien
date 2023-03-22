@@ -560,9 +560,9 @@ nav i {
     width: auto;
   }
 }
-.entrees .menu__btn,
-.plats .menu__btn,
-.desserts .menu__btn {
+.entrees .menu,
+.plats .menu,
+.desserts .menu {
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -572,30 +572,30 @@ nav i {
   padding: 12px;
   height: auto;
   opacity: 0;
-  animation: apparition 2s ease 1 forwards;
+  animation: apparition-menu 2s ease 1 forwards;
 }
-.entrees .menu__btn__name,
-.plats .menu__btn__name,
-.desserts .menu__btn__name {
+.entrees .menu__name,
+.plats .menu__name,
+.desserts .menu__name {
   display: flex;
   flex-direction: column;
   width: 85%;
 }
-.entrees .menu__btn__name h3,
-.plats .menu__btn__name h3,
-.desserts .menu__btn__name h3 {
+.entrees .menu__name h3,
+.plats .menu__name h3,
+.desserts .menu__name h3 {
   font-size: 18px;
   margin: 0 0 5px 0;
 }
-.entrees .menu__btn p,
-.plats .menu__btn p,
-.desserts .menu__btn p {
+.entrees .menu p,
+.plats .menu p,
+.desserts .menu p {
   font-size: 15px;
   margin: 0;
 }
-.entrees .menu__btn__prix,
-.plats .menu__btn__prix,
-.desserts .menu__btn__prix {
+.entrees .menu__prix,
+.plats .menu__prix,
+.desserts .menu__prix {
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -603,6 +603,58 @@ nav i {
   width: 10%;
   height: 100%;
   min-height: 45px;
+}
+.entrees .menu__selection,
+.plats .menu__selection,
+.desserts .menu__selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  position: relative;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+}
+.entrees .menu__selection input,
+.plats .menu__selection input,
+.desserts .menu__selection input {
+  display: nne;
+}
+.entrees .menu__selection input:checked + label .plus,
+.plats .menu__selection input:checked + label .plus,
+.desserts .menu__selection input:checked + label .plus {
+  display: normal;
+}
+.entrees .menu__selection input:not(:checked) + label .plus,
+.plats .menu__selection input:not(:checked) + label .plus,
+.desserts .menu__selection input:not(:checked) + label .plus {
+  display: none;
+}
+.entrees .menu__selection input:checked + label .check,
+.plats .menu__selection input:checked + label .check,
+.desserts .menu__selection input:checked + label .check {
+  display: none;
+}
+.entrees .menu__selection input:not(:checked) + label .check,
+.plats .menu__selection input:not(:checked) + label .check,
+.desserts .menu__selection input:not(:checked) + label .check {
+  display: normal;
+}
+.entrees .menu__selection label,
+.plats .menu__selection label,
+.desserts .menu__selection label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+}
+.entrees .menu__selection:hover,
+.plats .menu__selection:hover,
+.desserts .menu__selection:hover {
+  animation: appartion-check 0.5s ease-in-out;
 }
 .entrees .anim__1,
 .plats .anim__1,
@@ -659,11 +711,20 @@ nav i {
   margin: auto;
 }
 
-@keyframes apparition {
+@keyframes apparition-menu {
   0% {
     transform: translateX(-100vh);
   }
   100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes apparition-check {
+  to {
+    transform: translateX(100vh);
+  }
+  from {
     transform: translateX(0);
     opacity: 1;
   }
