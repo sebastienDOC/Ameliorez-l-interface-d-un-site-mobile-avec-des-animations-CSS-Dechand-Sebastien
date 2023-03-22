@@ -621,6 +621,7 @@ nav i {
   white-space: nowrap;
   overflow: hidden;
   width: 80%;
+  height: 20px;
 }
 .entrees .menu__sub__prix,
 .plats .menu__sub__prix,
