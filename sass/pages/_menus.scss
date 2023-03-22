@@ -62,55 +62,76 @@ nav {
         box-shadow: $shadow-cards;
         background: $white;
         border-radius: 15px;
-        margin: 15px 15px 15px 0;
-        padding: 12px;
-        height: auto;
+        margin: 15px 15px 15px 0; 
         opacity: 0;
         animation: apparition-menu 2s ease 1 forwards;
-        &__name {
+        overflow: hidden;
+        &__content {
+            width: 100%;
+            display: flex;
+            &:hover .menu__selection {
+                width: 60px;
+                animation: apparition-check 0.5s ease forwards;
+            }
+        }
+
+        &__gauche {
             display: flex;
             flex-direction: column;
-            width: 85%;
+            justify-content: center;
+            position: relative;
+            padding-left: 12px;
+            height: 100%;
+            width: 100%;
+        }
+        &__title {
             & h3 {
                 font-size: $size-logo;
                 margin: 0 0 5px 0;
             }
         }
-        & p {
-            font-size: $size-p-menu;
-            margin: 0;
+        &__sub {
+            display: inline-flex;
+            justify-content: space-between;
+            &__title {
+                margin: 0;
+
+            }
+            &__prix {
+                padding-right: 12px;
+                font-weight: $w-title;
+                margin: 0 ;
+            }
         }
-        &__prix {
-            font-weight: $w-title;
-            display: flex;
-            justify-content: center;
-            align-items: end;
-            width: 10%;
-            height: 100%;
-            min-height: 45px;
+        &__droite {
+            margin: 0;
+            padding: 0;
+            
         }
         &__selection {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 15%;
-            position: relative;
-            background-color: $color-tertiary;
+            background: $color-tertiary;
+            color: $color-tertiary;
             border-radius: 0 15px 15px 0;
+            height: 70px;
+            width: 0;
+            opacity: 0;
             cursor: pointer;
             & input {
-                display: nne;
-                &:checked + label .plus {
-                    display: normal;
-                }
-                &:not(:checked) + label .plus {
-                    display: none;
-                }&:checked + label .check {
+                display: none;
+                &:checked + label .menu__selection__plus {
                     display: none;
                 }
-                &:not(:checked) + label .check {
-                    display: normal;
+                &:not(:checked) + label .menu__selection__plus {
+                    display: flex;
+                }
+                &:checked + label .menu__selection__check {
+                    display: flex;
+                }
+                &:not(:checked) + label .menu__selection__check {
+                    display: none;
                 }
             }
             & label {
@@ -120,53 +141,60 @@ nav {
                 background: transparent;
                 cursor: pointer;
             }
-            &:hover {
-                animation: appartion-check 0.5s ease-in-out;
-            }
-            &__uncheck {
-        
+            &__plus {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $white;
+                border-radius: 20px;
+                width: 25px;
+                height: 25px;
+                
             }
             &__check {
-        
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $white;
+                border-radius: 20px;
+                width: 25px;
+                height: 25px;
+            }
+        }
+        &.anim {
+            &__1 {
+                animation-delay: 0.2s;
+            }
+            &__2 {
+                animation-delay: 0.4s;
+            }
+            &__3 {
+                animation-delay: 0.6s;
+            }
+            &__4 {
+                animation-delay: 0.8s;
+            }
+            &__5 {
+                animation-delay: 1s;
+            }
+            &__6 {
+                animation-delay: 1.2s;
+            }
+            &__7 {
+                animation-delay: 1.4s;
+            }
+            &__8 {
+                animation-delay: 1.6s;
+            }
+            &__9 {
+                animation-delay: 1.8s;
+            }
+            &__10 {
+                animation-delay: 2s;
             }
         }
     }
-    .anim {
-        &__1 {
-            animation-delay: 0.2s;
-        }
-        &__2 {
-            animation-delay: 0.4s;
-        }
-        &__3 {
-            animation-delay: 0.6s;
-        }
-        &__4 {
-            animation-delay: 0.8s;
-        }
-        &__5 {
-            animation-delay: 1s;
-        }
-        &__6 {
-            animation-delay: 1.2s;
-        }
-        &__7 {
-            animation-delay: 1.4s;
-        }
-        &__8 {
-            animation-delay: 1.6s;
-        }
-        &__9 {
-            animation-delay: 1.8s;
-        }
-        &__10 {
-            animation-delay: 2s;
-        }
-    }
-    
 }
-
-
 
 .titre__btn {
     margin: auto;
@@ -183,10 +211,10 @@ nav {
 }
 
 @keyframes apparition-check {
-    to {
-        transform: translateX(100vh);
-    }
     from {
+        transform: translateX(10vh);
+    }
+    to {
         transform: translateX(0);
         opacity: 1;
     }
