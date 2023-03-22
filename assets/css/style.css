@@ -438,7 +438,7 @@ footer i {
 }
 .block {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   position: absolute;
   opacity: 0;
@@ -571,7 +571,6 @@ nav i {
   margin: 15px 15px 15px 0;
   opacity: 0;
   animation: apparition-menu 2s ease 1 forwards;
-  overflow: hidden;
 }
 .entrees .menu__content,
 .plats .menu__content,
@@ -584,6 +583,11 @@ nav i {
 .desserts .menu__content:hover .menu__selection {
   width: 60px;
   animation: apparition-check 0.5s ease forwards;
+}
+.entrees .menu__content:hover .menu__gauche,
+.plats .menu__content:hover .menu__gauche,
+.desserts .menu__content:hover .menu__gauche {
+  width: calc(100% - 40px);
 }
 .entrees .menu__gauche,
 .plats .menu__gauche,
@@ -605,6 +609,7 @@ nav i {
 .entrees .menu__sub,
 .plats .menu__sub,
 .desserts .menu__sub {
+  font-size: 15px;
   display: inline-flex;
   justify-content: space-between;
 }
@@ -612,11 +617,16 @@ nav i {
 .plats .menu__sub__title,
 .desserts .menu__sub__title {
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
 }
 .entrees .menu__sub__prix,
 .plats .menu__sub__prix,
 .desserts .menu__sub__prix {
-  padding-right: 12px;
+  position: absolute;
+  right: 5%;
   font-weight: 700;
   margin: 0;
 }
