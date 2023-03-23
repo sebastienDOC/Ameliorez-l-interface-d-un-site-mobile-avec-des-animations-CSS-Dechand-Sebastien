@@ -658,7 +658,7 @@ nav i {
 .plats .menu__content:hover .menu__selection,
 .desserts .menu__content:hover .menu__selection {
   width: 60px;
-  animation: apparition-check 0.5s ease forwards;
+  animation: apparition-check 0.5s ease-in-out forwards;
 }
 .entrees .menu__content:hover .menu__gauche,
 .plats .menu__content:hover .menu__gauche,
@@ -695,7 +695,7 @@ nav i {
 .plats .menu__sub__title,
 .desserts .menu__sub__title {
   margin: 0;
-  overflow: hidden; /* Texte qui dépasse est caché*/
+  overflow: hidden; /* Texte qui dépasse est caché */
   text-overflow: ellipsis; /* Texte caché sous des "..." */
   white-space: nowrap; /* Pas de retour à la ligne */
   width: 80%;
@@ -727,6 +727,8 @@ nav i {
   height: 70px;
   width: 0;
   opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
   /* Signe + au moment de la sélection */
   /* Signe check une fois le plat sélectionné */

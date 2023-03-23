@@ -75,7 +75,7 @@ nav {
             /* Apparition de la div selection au survol du plat */
             &:hover .menu__selection {
                 width: 60px;
-                animation: apparition-check 0.5s ease forwards;
+                animation: apparition-check 0.5s ease-in-out forwards;
             }
             /* Décalage de l'intitulé et du prix au survol pour 
             laisser place au sélecteur */
@@ -106,7 +106,7 @@ nav {
             /* Accompagnement du plat */
             &__title {
                 margin: 0;
-                overflow: hidden; /* Texte qui dépasse est caché*/
+                overflow: hidden; /* Texte qui dépasse est caché */
                 text-overflow: ellipsis; /* Texte caché sous des "..." */
                 white-space: nowrap; /* Pas de retour à la ligne */
                 width: 80%;
@@ -135,6 +135,8 @@ nav {
             height: 70px;
             width: 0;
             opacity: 0;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
             cursor: pointer;
             & input {
                 display: none;
