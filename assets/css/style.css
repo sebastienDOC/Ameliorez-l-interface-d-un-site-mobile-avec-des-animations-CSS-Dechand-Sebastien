@@ -546,7 +546,7 @@ footer i {
 /* Loader */
 .loader {
   position: absolute;
-  bottom: 25%;
+  bottom: 15%;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -577,6 +577,7 @@ footer i {
 }
 .loader__food i {
   max-width: 60px;
+  padding: 10%;
 }
 
 .anim-1 {

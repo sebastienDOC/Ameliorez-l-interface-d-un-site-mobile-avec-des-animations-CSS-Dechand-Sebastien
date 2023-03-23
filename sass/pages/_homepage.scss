@@ -249,7 +249,7 @@
 /* Loader */
 .loader {
     position: absolute;
-    bottom: 25%;
+    bottom: 15%;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -278,6 +278,7 @@
         z-index: 2;
         & i {
             max-width: 60px;
+            padding: 10%;
         }
     }
 }
