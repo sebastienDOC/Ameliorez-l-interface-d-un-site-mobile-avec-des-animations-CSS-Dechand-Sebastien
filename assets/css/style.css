@@ -561,29 +561,35 @@ footer i {
   align-items: center;
   color: #9356DC;
   letter-spacing: 50px;
-  animation: flash 3s ease-in-out infinite;
+  animation: flash 1.5s ease-in-out infinite;
+  position: relative;
   z-index: 2;
 }
 .loader__food i {
   max-width: 60px;
   padding: 10%;
 }
+@media screen and (min-width: 1024px) {
+  .loader__food {
+    bottom: 10%;
+  }
+}
 
 /* Décalage flash loader */
 .anim-1 {
-  animation-delay: 0.3s;
+  animation-delay: 0.2s;
 }
 .anim-2 {
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 .anim-3 {
-  animation-delay: 0.9s;
+  animation-delay: 0.6s;
 }
 .anim-4 {
-  animation-delay: 1.2s;
+  animation-delay: 0.8s;
 }
 .anim-5 {
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 /* Fleche de retour à la page d'acceuil */
