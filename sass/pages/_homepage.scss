@@ -249,9 +249,8 @@
 /* Loader */
 .loader {
     position: absolute;
-    bottom: 15%;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,7 +272,7 @@
         align-items: center;
         color: $color-primary;
         letter-spacing: 100px;
-        margin-bottom: 150px;
+        margin-bottom: 20%;
         animation: flash 3s ease-in-out infinite;
         z-index: 2;
         & i {

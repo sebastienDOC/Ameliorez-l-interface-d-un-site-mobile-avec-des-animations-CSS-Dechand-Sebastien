@@ -22,16 +22,6 @@
     }
 }
 
-/* Rotation du loader sur homepage */
-@keyframes loading {
-    0% {
-    transform: rotate(0deg);
-    }
-    100% {
-    transform: rotate(360deg);
-    }
-}
-
 /* Disparition du loader sur homepage */
 @keyframes hide {
     0%,80% {
@@ -65,10 +55,10 @@
     }
 }
 
-/* Apparition sélection de commande depuis la droite*/
+/* Apparition sélection de commande depuis la droite */
 @keyframes apparition-check {
     0% {
-        transform: translateX(6vh);
+        transform: translateX(2vh);
     }
     100% {
         transform: translateX(0);
