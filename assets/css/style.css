@@ -277,10 +277,12 @@ footer i {
 }
 
 /* Footer des pages de restaurant*/
-.footer__menus {
-  width: 150%;
-  position: relative;
-  right: 33%;
+@media screen and (min-width: 1024px) {
+  .footer__menus {
+    width: 150%;
+    position: relative;
+    right: 33%;
+  }
 }
 
 /* Conteneur général */
