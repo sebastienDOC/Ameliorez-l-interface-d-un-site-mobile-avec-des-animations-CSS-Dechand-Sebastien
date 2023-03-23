@@ -219,8 +219,13 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 transform-origin: bottom;
-                &:hover {
+                &:active {
                     animation: like 0.5s ease forwards;
+                }
+                @include desktop-only {
+                    &:hover {
+                        animation: like 0.5s ease forwards;
+                    }
                 }
             }
         }

@@ -514,8 +514,13 @@ footer i {
   -webkit-background-clip: text;
   transform-origin: bottom;
 }
-.cards__txt__like .heart-full:hover {
+.cards__txt__like .heart-full:active {
   animation: like 0.5s ease forwards;
+}
+@media screen and (min-width: 1024px) {
+  .cards__txt__like .heart-full:hover {
+    animation: like 0.5s ease forwards;
+  }
 }
 @media screen and (min-width: 1024px) {
   .cards {
