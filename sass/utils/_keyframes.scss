@@ -43,12 +43,11 @@
 
 /* Apparition sélection de commande depuis la droite*/
 @keyframes apparition-check {
-    from {
-        transform: translateX(10vh);
+    0% {
+        transform: translateX(5vh);
     }
-    to {
+    100% {
         transform: translateX(0);
-        opacity: 1;
     }
 }
 
