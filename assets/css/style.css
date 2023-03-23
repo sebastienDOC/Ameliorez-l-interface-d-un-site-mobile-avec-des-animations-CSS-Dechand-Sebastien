@@ -406,6 +406,11 @@ footer i {
     display: flex;
     flex-direction: row;
     overflow: auto;
+    overflow-x: hidden; /* Cacher scrollbar horizontale */
+    scrollbar-width: thin;
+  }
+  .restaurants__flex:hover {
+    overflow-x: visible; /* Apparaitre scrollbar horizontale */
   }
 }
 
