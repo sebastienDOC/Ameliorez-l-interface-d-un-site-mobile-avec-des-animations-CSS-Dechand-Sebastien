@@ -30,6 +30,28 @@ nav {
     }
 }
 
+/* Favoris/Like */
+.cards__txt__like {
+    & input {
+        display: none;
+        /* Mettre en favoris au clic */
+        &:checked + label .heart-full {
+            animation: like 1s ease-in-out forwards;
+        }
+        /* Retirer des favoris au clic */
+        &:not(:checked) + label .heart-full {
+            animation: dislike 1s forwards;
+        }
+    }
+    & label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        cursor: pointer;
+    }
+}
+
 /* Placement de la page par dessus l'image */
 .container__menu {
     background: $color-fct;
