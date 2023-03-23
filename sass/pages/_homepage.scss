@@ -136,8 +136,8 @@
         &__flex {
             display: flex;
             flex-direction: row;
-            overflow: auto;
-            scrollbar-width: thin;
+            overflow-x: auto;
+            scrollbar-width: none;
         }
     }
 }
