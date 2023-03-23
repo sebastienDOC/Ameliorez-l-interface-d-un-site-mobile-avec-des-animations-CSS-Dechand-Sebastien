@@ -147,6 +147,47 @@ nav p {
   }
 }
 
+/* Barre de recherche de la ville */
+.barre {
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid #d2d2d2;
+  background: #EAEAEA;
+  justify-content: center;
+  /* Pointeur */
+}
+.barre input {
+  background: #EAEAEA;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 0;
+  border: none;
+  width: 60%;
+  height: 50px;
+  outline: none;
+  text-align: center;
+  z-index: 1;
+}
+.barre input::placeholder {
+  color: black;
+  opacity: 1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.barre__icone {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  left: 10%;
+  z-index: 2;
+}
+@media screen and (min-width: 1024px) {
+  .barre__icone {
+    left: 23%;
+  }
+}
+
 /* Image du restaurant */
 .entete img {
   width: 100%;
@@ -229,43 +270,6 @@ footer i {
 .container__index h2 {
   font-size: 24px;
   font-weight: 700;
-}
-
-/* Barre de recherche de la ville */
-.barre {
-  display: flex;
-  flex-direction: row;
-  border-top: 2px solid #d2d2d2;
-  background: #EAEAEA;
-  justify-content: center;
-  /* Pointeur */
-}
-.barre input {
-  background: #EAEAEA;
-  padding: 0;
-  border: none;
-  width: 60%;
-  height: 50px;
-  outline: none;
-  text-align: center;
-}
-.barre input::placeholder {
-  color: black;
-  opacity: 1;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-}
-.barre__icone {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  position: relative;
-  left: 10%;
-}
-@media screen and (min-width: 1024px) {
-  .barre__icone {
-    left: 23%;
-  }
 }
 
 .titre {

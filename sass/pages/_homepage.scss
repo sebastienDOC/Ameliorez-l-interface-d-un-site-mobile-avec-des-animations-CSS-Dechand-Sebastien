@@ -5,40 +5,6 @@
         font-weight: $w-title;
     }
 }
- /* Barre de recherche de la ville */
-.barre {
-    display: flex;
-    flex-direction: row;
-    border-top: 2px solid $color-border;
-    background: $color-search ;
-    justify-content: center;
-    & input {
-        background: $color-search ;
-        padding: 0;
-        border: none;
-        width: 60%;
-        height: 50px;
-        outline: none;
-        text-align: center;
-        &::placeholder {
-            color: black;
-            opacity: 1;  
-            font-family: $font-txt;
-            font-weight: $w-txt;
-        }
-    }
-    /* Pointeur */
-    &__icone{
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        position: relative;
-        left: 10%;
-        @include desktop-only {
-            left: 23%;
-        }
-    }
-}
 
 .titre {
     display: flex;
