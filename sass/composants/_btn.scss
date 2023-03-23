@@ -1,3 +1,4 @@
+/* Bouton */ 
 button {
     padding: 15px 20px;
     background: linear-gradient(350deg, $color-primary, 60%, $color-secondary);
@@ -16,13 +17,3 @@ button {
         animation: bouton 0.3s ease forwards;
     }
 }
-
-@keyframes bouton {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.9;
-    }
-}
-

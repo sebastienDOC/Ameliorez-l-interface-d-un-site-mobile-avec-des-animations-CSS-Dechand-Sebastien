@@ -1,0 +1,77 @@
+/* Rotation du loader sur homepage */
+@keyframes loading {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+/* Disparition du loader sur homepage */
+@keyframes hide {
+    0%,80% {
+        opacity: 1;
+        z-index: 3;
+    }
+    100% {
+        opacity: 0;
+        z-index: 3;
+    }
+}
+
+/* Bouton légèrement plus claire */
+@keyframes bouton {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+/* Apparition des éléments depuis la gauche */
+@keyframes apparition-menu {
+    0% {
+        transform: translateX(-100vh);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apparition sélection de commande depuis la droite*/
+@keyframes apparition-check {
+    from {
+        transform: translateX(10vh);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Remplissage du coeur */
+@keyframes like {
+    0% {
+        transform: scale(0);
+      }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    
+}
+
+/* Vidage du coeur */
+@keyframes dislike {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    100% {
+        transform: scale(0);
+      }
+    
+}

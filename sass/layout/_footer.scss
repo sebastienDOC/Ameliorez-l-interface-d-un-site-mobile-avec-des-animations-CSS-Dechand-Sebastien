@@ -5,6 +5,7 @@ footer {
     color: $white;
     margin-top: 50px;
     padding: 25px 0 30px 25px;
+    /* Mise en colonne des liens */
     & .nav__footer {
         display: flex;
         flex-direction: column;
@@ -13,9 +14,10 @@ footer {
         color: $white;
         margin-bottom: 7px;
         &:hover {
-            font-weight: $w-title;
+            font-weight: $w-title; 
         }
     }
+    /* Logo footer */ 
     & p {
         margin: 0 0 15px 0;
         font-family: $font-title;
@@ -26,8 +28,8 @@ footer {
         margin-right: 10px;
     }
     @include desktop-only {
-        flex-direction: row;
-        justify-content: flex-end;
+        flex-direction: row; /* Mise en ligne des liens */
+        justify-content: flex-end; 
         margin-top: 80px;
         padding: 50px;
         width: 100%;
@@ -37,12 +39,14 @@ footer {
         & p {
             margin: 0 50px 0 50px;
         }
+        /* Positionnement des liens */
         & .logo__footer {
             order: 2;
         }
+        /* Positionnement des liens */
         & .nav__footer {
             order: 1;
-            flex-direction: row;
+            flex-direction: row; /* Mise en ligne des liens */
             align-items: center;
             gap: 40px;
 
@@ -50,6 +54,7 @@ footer {
     }
 }
 
+/* Footer des pages de restaurant*/
 .footer__menus {
     width: 150%;
     position: relative;

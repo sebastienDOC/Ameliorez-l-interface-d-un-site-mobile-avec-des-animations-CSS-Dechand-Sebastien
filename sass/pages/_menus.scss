@@ -1,3 +1,4 @@
+/* Fleche de retour à la page d'acceuil */
 nav {
     display: flex;
     align-items: center;
@@ -8,6 +9,7 @@ nav {
     }
 }
 
+/* Nom du restaurant */
 .nom {
     display: flex;
     flex-direction: row;
@@ -28,6 +30,7 @@ nav {
     }
 }
 
+/* Placement de la page par dessus l'image */
 .container__menu {
     background: $color-fct;
     width: 100%;
@@ -56,6 +59,7 @@ nav {
         padding: 0;
         width: auto;
     }
+    /* Elements du menu */
     & .menu {
         display: flex;
         justify-content: space-between;
@@ -68,15 +72,17 @@ nav {
         &__content {
             width: 100%;
             display: flex;
+            /* Apparition de la div selection au survol du plat */
             &:hover .menu__selection {
                 width: 60px;
                 animation: apparition-check 0.5s ease forwards;
             }
+            /* Décalage de l'intitulé et du prix au survol pour 
+            laisser place au sélecteur */
             &:hover .menu__gauche {
-                width: calc(100% - 40px);
+                width: calc(100% - 60px);
               }
         }
-
         &__gauche {
             display: flex;
             flex-direction: column;
@@ -86,6 +92,7 @@ nav {
             height: 100%;
             width: 100%;
         }
+        /* Intitulé du plat */
         &__title {
             & h3 {
                 font-size: $size-logo;
@@ -96,14 +103,16 @@ nav {
             font-size: $size-p-menu;
             display: inline-flex;
             justify-content: space-between;
+            /* Accompagnement du plat */
             &__title {
                 margin: 0;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+                overflow: hidden; /* Texte qui dépasse est caché*/
+                text-overflow: ellipsis; /* Texte caché sous des "..." */
+                white-space: nowrap; /* Pas de retour à la ligne */
                 width: 80%;
                 height: 20px;
             }
+            /* Prix du plat */
             &__prix {
                 position: absolute;
                 right: 5%;
@@ -115,6 +124,7 @@ nav {
             margin: 0;
             padding: 0;
         }
+        /* Sélection du plat */
         &__selection {
             display: flex;
             justify-content: center;
@@ -128,12 +138,14 @@ nav {
             cursor: pointer;
             & input {
                 display: none;
+                /* Sélectionner le plat avec un clic sur le plus */ 
                 &:checked + label .menu__selection__plus {
                     display: none;
                 }
                 &:not(:checked) + label .menu__selection__plus {
                     display: flex;
                 }
+                /* Retirer le plat avec un clic sur le check */
                 &:checked + label .menu__selection__check {
                     display: flex;
                 }
@@ -148,6 +160,7 @@ nav {
                 background: transparent;
                 cursor: pointer;
             }
+            /* Signe + au moment de la sélection */
             &__plus {
                 display: flex;
                 align-items: center;
@@ -156,8 +169,8 @@ nav {
                 border-radius: 20px;
                 width: 25px;
                 height: 25px;
-                
             }
+            /* Signe check une fois le plat sélectionné */
             &__check {
                 display: flex;
                 align-items: center;
@@ -168,6 +181,7 @@ nav {
                 height: 25px;
             }
         }
+        /* Animation progressive des plats */
         &.anim {
             &__1 {
                 animation-delay: 0.2s;
@@ -203,26 +217,7 @@ nav {
     }
 }
 
+/* Bouton centré */
 .titre__btn {
     margin: auto;
-}
-
-@keyframes apparition-menu {
-    0% {
-        transform: translateX(-100vh);
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes apparition-check {
-    from {
-        transform: translateX(10vh);
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }

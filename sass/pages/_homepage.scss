@@ -1,7 +1,42 @@
+/* Conteneur général */
 .container__index {
     & h2 {
         font-size: $size-subtitle;
         font-weight: $w-title;
+    }
+}
+ /* Barre de recherche de la ville */
+.barre {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid $color-border;
+    background: $color-search ;
+    justify-content: center;
+    & input {
+        background: $color-search ;
+        padding: 0;
+        border: none;
+        width: 60%;
+        height: 50px;
+        outline: none;
+        text-align: center;
+        &::placeholder {
+            color: black;
+            opacity: 1;  
+            font-family: $font-txt;
+            font-weight: $w-txt;
+        }
+    }
+    /* Pointeur */
+    &__icone{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        position: relative;
+        left: 10%;
+        @include desktop-only {
+            left: 23%;
+        }
     }
 }
 
@@ -32,44 +67,12 @@
     }
 }
 
-
-.barre {
-    display: flex;
-    flex-direction: row;
-    border-top: 2px solid $color-border;
-    background: $color-search ;
-    justify-content: center;
-    & input {
-        background: $color-search ;
-        padding: 0;
-        border: none;
-        width: 60%;
-        height: 50px;
-        outline: none;
-        text-align: center;
-        &::placeholder {
-            color: black;
-            opacity: 1;  
-            font-family: $font-txt;
-            font-weight: $w-txt;
-        }
-    }
-    &__icone{
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        position: relative;
-        left: 10%;
-        @include desktop-only {
-            left: 23%;
-        }
-    }
-}
-
+/* Explication fonctionnement du site */
 .fonctionnement {
     background: $white;
     position: relative;
     z-index: -1;
+    /* Mise en colonne des éléments */
     &__flex {
         display: flex;
         flex-direction: column;
@@ -77,34 +80,40 @@
         background: $white;
         padding: 0 0 50px 0;
     }
+    /* Elements du fonctionnement du site*/
     &__btn {
         background: $color-fct;
         display: flex;
         flex-direction: row;
         align-items: center;
         border-radius: 25px;
+        box-shadow: $shadow-cards;
         height: 70px;
         margin: 0 10% 0 10%;
         &#deguster {
             background: #F5EDFF;
         }
     }
+    /* Choisir / Composer / Déguster */
     &__txt {
         font-weight: $w-txt;
         position: absolute;
         left: 30%;
     }
+    /* Chiffre entouré */
     &__number {
         display: flex;
         position: relative;
         right: 14px;
         bottom: 1px;
+        /* Chiffre */
         &__numb {
             color: $white;
             position: relative;
             left: 14px;
             top: 1px;
         }
+        /* Cercle */
         &__circle {
             background: $color-primary;
             border: 2px solid $color-primary;
@@ -113,6 +122,7 @@
             border-radius: 50%;
         }
     }
+    /* Icone de l'élément */
     &__icone {
         color: $color-icone;
         position: absolute;
@@ -126,6 +136,7 @@
         & h2 {
             margin: 0;
         }
+        /* Mise en ligne des éléments */
         &__flex {
             flex-direction: row;
             gap: 3%;
@@ -152,6 +163,7 @@
     }
 }
 
+/* Mise en ligne des restaurants */
 .restaurants {
     @include desktop-only {
         padding-left: 14%;
@@ -163,12 +175,14 @@
     }
 }
 
+/* Différents restaurants */
 .cards {
     border-radius: 20px;
     margin: 0 20px 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     height: 251px;
     position: relative;
+    /* Encart "Nouveau" */
     &__new {
         display: flex;
         align-items: center;
@@ -185,6 +199,7 @@
         top: 5%;
         left: 76%;
     }
+    /* Image du restaurant */
     &__img {
         padding: 0;
         height: 70%;
@@ -195,6 +210,7 @@
             object-fit: cover;
         }
     }
+    /* Nom et localisation du restaurant*/
     &__txt {
         display: flex;
         height: 30%;
@@ -211,6 +227,7 @@
                 padding: 0 0 0 10px;
             }
         }
+        /* Favoris */
         &__like {
             display: flex;
             flex-direction: column;
@@ -221,9 +238,11 @@
             cursor: pointer;
             & input {
                 display: none;
+                /* Mettre en favoris au clic */
                 &:checked + label .heart-full {
                     animation: like 1s ease-in-out forwards;
                 }
+                /* Retirer des favoris au clic */
                 &:not(:checked) + label .heart-full {
                     animation: dislike 1s forwards;
                 }
@@ -241,6 +260,7 @@
                 align-items: center;
                 height: 24px;
             }
+            /* Coeur plein couleur */
             & .heart-full {
                 opacity: 0;
                 position: absolute;
@@ -259,28 +279,7 @@
         }
 }
 
-@keyframes like {
-    0% {
-        transform: scale(0);
-      }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    
-}
-
-@keyframes dislike {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    100% {
-        transform: scale(0);
-      }
-    
-}
-
+/* Bloc du loader */
 .block {
     width: 100%;
     height: 100%;
@@ -288,6 +287,7 @@
     position: absolute;
     opacity: 0;
     animation: 3s hide 1;
+    /* Loader */
     &__loader {
         position: absolute;
         width: 100%;
@@ -295,6 +295,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        /* Fond noir du loader*/
         &::before {
             content: "";
             position: absolute;
@@ -305,6 +306,7 @@
             background: #0b0b0b;
             opacity: 0.5;
         }
+        /* Cercle du loader*/
         &::after {
             content: "";
             position: absolute;
@@ -317,24 +319,5 @@
             height: 200px;
             animation: loading 1s linear infinite;
         }
-    }
-}
-@keyframes loading {
-    0% {
-    transform: rotate(0deg);
-    }
-    100% {
-    transform: rotate(360deg);
-    }
-}
-
-@keyframes hide {
-    0%,80% {
-        opacity: 1;
-        z-index: 3;
-    }
-    100% {
-        opacity: 0;
-        z-index: 3;
     }
 }
