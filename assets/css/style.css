@@ -580,6 +580,7 @@ footer i {
   padding: 10%;
 }
 
+/* Décalage flash loader */
 .anim-1 {
   animation-delay: 0.3s;
 }
