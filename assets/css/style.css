@@ -423,8 +423,7 @@ footer i {
   .restaurants__flex {
     display: flex;
     flex-direction: row;
-    overflow-x: auto;
-    scrollbar-width: none;
+    overflow: auto;
   }
 }
 
