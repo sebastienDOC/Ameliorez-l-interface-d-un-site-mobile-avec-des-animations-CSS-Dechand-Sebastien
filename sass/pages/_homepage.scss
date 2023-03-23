@@ -246,45 +246,56 @@
         }
 }
 
-/* Bloc du loader */
-.block {
+/* Loader */
+.loader {
+    position: absolute;
+    bottom: 25%;
     width: 100%;
     height: 100vh;
-    margin: 0 auto;
-    position: absolute;
-    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: 3s hide 1;
-    /* Loader */
-    &__loader {
+    margin: auto;
+    opacity: 0;
+    &::before {
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
+        z-index: 1;
+        background: white;
+        opacity: 0.5;
+    }
+    &__food {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* Fond noir du loader*/
-        &::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            overflow: hidden;
-            background: #0b0b0b;
-            opacity: 0.5;
+        color: $color-primary;
+        letter-spacing: 100px;
+        margin-bottom: 150px;
+        animation: flash 3s ease-in-out infinite;
+        z-index: 2;
+        & i {
+            max-width: 60px;
         }
-        /* Cercle du loader*/
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 70%;
-            z-index: 2;
-            border: 5px solid $color-fct;
-            border-top: 5px solid $color-primary;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            animation: loading 1s linear infinite;
-        }
+    }
+}
+
+.anim {
+    &-1 {
+        animation-delay: 0.3s;
+    }
+    &-2 {
+        animation-delay: 0.6s;
+    }
+    &-3 {
+        animation-delay: 0.9s;
+    }
+    &-4 {
+        animation-delay: 1.2s;
+    }
+    &-5 {
+        animation-delay: 1.5s;
     }
 }

@@ -1,3 +1,27 @@
+/* Flash du loader */
+@keyframes flash {
+    0% {
+        transform: scale(1);
+        color: #9356DC;
+        text-shadow: 0 0 7px #9356DC;
+    }
+    50% {
+        transform: scale(1.2);
+        color: #9356DC;
+        text-shadow: 0 0 7px #9356DC;
+    }
+    90% {
+        color: #9356DC;
+        opacity: 0.8;
+        text-shadow: none;
+    }
+    100% {
+        transform: scale(1);
+        color: #9356DC;
+        text-shadow: 0 0 7px #9356DC;
+    }
+}
+
 /* Rotation du loader sur homepage */
 @keyframes loading {
     0% {
