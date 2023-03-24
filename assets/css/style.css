@@ -215,8 +215,7 @@ nav p {
   width: 100%;
   height: 275px;
   object-fit: cover;
-  position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
 @media screen and (min-width: 1024px) {
   .entete img {
@@ -229,7 +228,6 @@ footer {
   flex-direction: column;
   background: #353535;
   color: #fff;
-  margin-top: 50px;
   padding: 25px 0 30px 25px;
   /* Mise en colonne des liens */
   /* Logo footer */
@@ -258,7 +256,6 @@ footer i {
   footer {
     flex-direction: row; /* Mise en ligne des liens */
     justify-content: flex-end;
-    margin-top: 80px;
     padding: 50px;
     width: 100%;
     /* Positionnement des liens */
@@ -278,15 +275,6 @@ footer i {
     flex-direction: row; /* Mise en ligne des liens */
     align-items: center;
     gap: 40px;
-  }
-}
-
-/* Footer des pages de restaurant*/
-@media screen and (min-width: 1024px) {
-  .footer__menus {
-    width: 150%;
-    position: relative;
-    right: 33%;
   }
 }
 
@@ -406,9 +394,13 @@ footer i {
 }
 
 /* Mise en ligne des restaurants */
+.restaurants {
+  margin-bottom: 50px;
+}
 @media screen and (min-width: 1024px) {
   .restaurants {
     padding-left: 14%;
+    margin-bottom: 80px;
   }
   .restaurants__flex {
     display: flex;
@@ -587,7 +579,7 @@ nav i {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 50px 20px 40px 20px;
+  margin: 0 20px 40px 20px;
 }
 .nom h1 {
   margin: 0;
@@ -624,22 +616,21 @@ nav i {
   cursor: pointer;
 }
 
-/* Placement de la page par dessus l'image */
-.container__menu {
+.main__menu {
   background: #F6F6F6;
   width: 100%;
-  position: absolute;
-  top: 275px;
-  z-index: 2;
   border-radius: 50px 50px 0 0;
+  padding: 30px 0 40px 0;
+  z-index: 2;
+  transform: translateY(-30px) scaleY(1.05);
 }
-.container__menu h2 {
+.main__menu h2 {
   padding: 0;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
 @media screen and (min-width: 1024px) {
-  .container__menu {
+  .main__menu {
     width: 75%;
     margin: 0 12.5%;
     top: 450px;

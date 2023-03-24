@@ -3,7 +3,6 @@ footer {
     flex-direction: column;
     background: $color-footer;
     color: $white;
-    margin-top: 50px;
     padding: 25px 0 30px 25px;
     /* Mise en colonne des liens */
     & .nav__footer {
@@ -30,7 +29,6 @@ footer {
     @include desktop-only {
         flex-direction: row; /* Mise en ligne des liens */
         justify-content: flex-end; 
-        margin-top: 80px;
         padding: 50px;
         width: 100%;
         & a {
@@ -50,14 +48,5 @@ footer {
             align-items: center;
             gap: 40px;
         }
-    }
-}
-
-/* Footer des pages de restaurant*/
-.footer__menus {
-    @include desktop-only {
-        width: 150%;
-        position: relative;
-        right: 33%;
     }
 }

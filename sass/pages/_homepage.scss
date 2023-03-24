@@ -111,8 +111,10 @@
 
 /* Mise en ligne des restaurants */
 .restaurants {
+    margin-bottom: 50px;
     @include desktop-only {
         padding-left: 14%;
+        margin-bottom: 80px;
         &__flex {
             display: flex;
             flex-direction: row;
