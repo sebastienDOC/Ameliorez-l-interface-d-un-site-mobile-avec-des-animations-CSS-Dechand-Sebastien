@@ -4,6 +4,15 @@ footer {
     background: $color-footer;
     color: $white;
     padding: 25px 0 30px 25px;
+    &.footer__menu {
+        transform: translateY(200px);
+        @include tablette-only {
+            transform: translateY(275px);
+        }
+        @include desktop-only {
+            transform: translateY(350px);
+        }
+    }
     /* Mise en colonne des liens */
     & .nav__footer {
         display: flex;
@@ -27,7 +36,6 @@ footer {
         margin-right: 10px;
     }
     @include tablette-only {
-        margin-top: 50px;
         flex-direction: row; /* Mise en ligne des liens */
         justify-content: flex-end; 
         padding: 50px;
@@ -57,7 +65,6 @@ footer {
         }
     }
     @include desktop-only {
-        margin-bottom: 0;
         & a {
             flex-grow: 0;
         }
