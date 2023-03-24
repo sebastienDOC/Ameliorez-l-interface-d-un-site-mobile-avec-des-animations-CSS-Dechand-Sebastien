@@ -30,12 +30,17 @@
 /* Disparition du loader sur homepage */
 @keyframes hide {
   0%, 80% {
+    display: block;
     opacity: 1;
-    z-index: 3;
+    z-index: 100;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+    z-index: 100;
   }
   100% {
-    opacity: 0;
-    z-index: 3;
+    display: none;
   }
 }
 /* Bouton légèrement plus claire */
@@ -360,24 +365,16 @@ footer i {
 }
 .fonctionnement__number {
   display: flex;
-  position: relative;
-  right: 14px;
-  bottom: 1px;
-  /* Chiffre */
-  /* Cercle */
-}
-.fonctionnement__number__numb {
-  color: #fff;
-  position: relative;
-  left: 14px;
-  top: 1px;
-}
-.fonctionnement__number__circle {
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
   background: #9356DC;
-  border: 2px solid #9356DC;
-  min-width: 20px;
-  min-height: 20px;
+  color: white;
   border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .fonctionnement__icone {
   color: #7e7e7e;
@@ -533,7 +530,7 @@ footer i {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: 3s hide 1;
+  animation: 3s hide 1 forwards;
   margin: auto;
   opacity: 0;
 }

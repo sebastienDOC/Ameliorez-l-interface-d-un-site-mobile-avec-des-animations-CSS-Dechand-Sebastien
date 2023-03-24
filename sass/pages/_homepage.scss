@@ -69,24 +69,16 @@
     /* Chiffre entouré */
     &__number {
         display: flex;
-        position: relative;
-        right: 14px;
-        bottom: 1px;
-        /* Chiffre */
-        &__numb {
-            color: $white;
-            position: relative;
-            left: 14px;
-            top: 1px;
-        }
-        /* Cercle */
-        &__circle {
-            background: $color-primary;
-            border: 2px solid $color-primary;
-            min-width: 20px;
-            min-height: 20px;
-            border-radius: 50%;
-        }
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        background: $color-primary;
+        color: white;
+        border-radius: 50%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
     /* Icone de l'élément */
     &__icone {
@@ -240,7 +232,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: 3s hide 1;
+    animation: 3s hide 1 forwards;
     margin: auto;
     opacity: 0;
     &::before {
