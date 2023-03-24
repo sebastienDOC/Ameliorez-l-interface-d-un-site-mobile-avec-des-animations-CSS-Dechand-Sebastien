@@ -29,18 +29,28 @@
 }
 /* Disparition du loader sur homepage */
 @keyframes hide {
-  0%, 80% {
-    display: block;
+  0% {
     opacity: 1;
     z-index: 100;
   }
   99% {
-    display: block;
-    opacity: 0;
+    opacity: 1;
     z-index: 100;
   }
   100% {
-    display: none;
+    z-index: -100;
+  }
+}
+/* Cacher tout ce qui dépasse du loader le temps de l'animation */
+@keyframes hide-body {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
   }
 }
 /* Bouton légèrement plus claire */
@@ -95,6 +105,7 @@
   }
 }
 /* MQ responsive desktop */
+/* MQ responsive tablette */
 * {
   box-sizing: border-box;
 }
@@ -105,6 +116,7 @@ body {
   font-family: "Roboto", sans-serif;
   background: rgba(210, 210, 210, 0.1);
   font-weight: 300;
+  animation: 3s hide-body 1 forwards;
 }
 
 a {
@@ -155,13 +167,19 @@ header {
 /* Logo du site */
 nav {
   display: flex;
-  place-content: center;
+  justify-content: center;
+  align-items: center;
   font-family: "Shrikhand", cursive;
   font-size: 30px;
   background: #fff;
 }
 nav p {
   margin: 15px 0 5px 0;
+}
+nav i {
+  position: absolute;
+  right: 90%;
+  color: #353535;
 }
 @media screen and (min-width: 1024px) {
   nav {
@@ -217,6 +235,11 @@ nav p {
   object-fit: cover;
   z-index: -1;
 }
+@media screen and (min-width: 768px) {
+  .entete img {
+    height: 350px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .entete img {
     height: 425px;
@@ -252,8 +275,9 @@ footer p {
 footer i {
   margin-right: 10px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   footer {
+    margin-top: 50px;
     flex-direction: row; /* Mise en ligne des liens */
     justify-content: flex-end;
     padding: 50px;
@@ -263,9 +287,14 @@ footer i {
   }
   footer a {
     margin-bottom: 0;
+    flex-grow: 1;
   }
   footer p {
-    margin: 0 50px 0 50px;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+  footer i {
+    margin-right: 5px;
   }
   footer .logo__footer {
     order: 2;
@@ -274,7 +303,24 @@ footer i {
     order: 1;
     flex-direction: row; /* Mise en ligne des liens */
     align-items: center;
+    gap: 14px;
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-bottom: 0;
+    /* Positionnement des liens */
+  }
+  footer a {
+    flex-grow: 0;
+  }
+  footer p {
+    margin: 0 50px 0 50px;
+  }
+  footer .nav__footer {
     gap: 40px;
+    flex-grow: 0;
   }
 }
 
@@ -324,12 +370,18 @@ footer i {
   /* Chiffre entouré */
   /* Icone de l'élément */
 }
+@media screen and (min-width: 768px) {
+  .fonctionnement h2 {
+    margin: 0 5%;
+  }
+}
 .fonctionnement__flex {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
   background: #fff;
-  padding: 0 0 50px 0;
+  padding: 0 20px 50px 20px;
 }
 .fonctionnement__btn {
   z-index: 2;
@@ -339,8 +391,10 @@ footer i {
   align-items: center;
   border-radius: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  min-width: 0;
   height: 70px;
-  margin: 0 10% 0 10%;
 }
 .fonctionnement__btn__flex {
   width: 100%;
@@ -353,6 +407,11 @@ footer i {
 }
 .fonctionnement__btn:hover > .fonctionnement__btn__flex .fonctionnement__icone {
   color: #9356DC;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__btn {
+    width: 450px;
+  }
 }
 .fonctionnement__txt {
   font-weight: 500;
@@ -397,14 +456,28 @@ footer i {
 .restaurants {
   margin-bottom: 50px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .restaurants {
-    padding-left: 14%;
-    margin-bottom: 80px;
+    margin: 0 5%;
   }
   .restaurants__flex {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants a {
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    padding-left: 14%;
+    margin: 0 0 80px 0;
+  }
+  .restaurants__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     overflow: auto;
     scrollbar-width: thin;
     padding-bottom: 20px;
@@ -476,10 +549,8 @@ footer i {
   cursor: pointer;
   /* Coeur plein couleur */
 }
-@media screen and (min-width: 1024px) {
-  .cards__txt__like:hover > .heart-full {
-    animation: like 0.5s ease forwards;
-  }
+.cards__txt__like:hover > .heart-full {
+  animation: like 0.5s ease forwards;
 }
 .cards__txt__like i {
   display: flex;
@@ -498,9 +569,15 @@ footer i {
   -webkit-background-clip: text;
   transform-origin: bottom;
 }
+@media screen and (min-width: 768px) {
+  .cards {
+    min-width: 300px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .cards {
     width: 335px;
+    margin: 0 40px 20px 0;
   }
 }
 
@@ -562,17 +639,6 @@ footer i {
   animation-delay: 1s;
 }
 
-/* Fleche de retour à la page d'acceuil */
-nav {
-  display: flex;
-  align-items: center;
-}
-nav i {
-  position: absolute;
-  right: 90%;
-  color: #353535;
-}
-
 /* Nom du restaurant */
 .nom {
   display: flex;
@@ -590,7 +656,7 @@ nav i {
 .nom .cards__txt__like {
   width: 10%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .nom {
     justify-content: center;
   }
@@ -622,18 +688,17 @@ nav i {
   border-radius: 50px 50px 0 0;
   padding: 30px 0 40px 0;
   z-index: 2;
-  transform: translateY(-30px) scaleY(1.05);
+  transform: translateY(-75px);
 }
 .main__menu h2 {
   padding: 0;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .main__menu {
     width: 75%;
     margin: 0 12.5%;
-    top: 450px;
   }
 }
 
@@ -642,15 +707,6 @@ nav i {
 .desserts {
   padding: 0 0 40px 15px;
   /* Elements du menu */
-}
-@media screen and (min-width: 1024px) {
-  .entrees,
-  .plats,
-  .desserts {
-    margin: 0 20% 40px;
-    padding: 0;
-    width: auto;
-  }
 }
 .entrees .menu,
 .plats .menu,
@@ -855,6 +911,22 @@ nav i {
 .plats .menu.anim__10,
 .desserts .menu.anim__10 {
   animation-delay: 2s;
+}
+@media screen and (min-width: 768px) {
+  .entrees,
+  .plats,
+  .desserts {
+    margin: 0 10% 40px;
+    padding: 0;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .entrees,
+  .plats,
+  .desserts {
+    margin: 0 20% 40px;
+  }
 }
 
 /* Bouton centré */

@@ -4,3 +4,10 @@
         @content;
     }
 }
+
+/* MQ responsive tablette */
+@mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints, tablette)){
+        @content;
+    }
+}

@@ -5,12 +5,18 @@ header {
 /* Logo du site */
 nav {
     display: flex;
-    place-content: center;
+    justify-content: center;
+    align-items: center;    
     font-family: $font-title;
     font-size: $size-title;
     background: $white;
     & p {
         margin: 15px 0 5px 0;
+    }
+    & i {
+        position: absolute;
+        right: 90%;
+        color: $color-footer;
     }
     @include desktop-only {
         font-size: $size-nom-desktop;
@@ -64,6 +70,9 @@ nav {
         height: 275px;
         object-fit: cover;
         z-index: -1;
+        @include tablette-only {
+            height: 350px;
+        }
         @include desktop-only {
             height: 425px;
         }

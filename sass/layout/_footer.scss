@@ -26,16 +26,22 @@ footer {
     & i {
         margin-right: 10px;
     }
-    @include desktop-only {
+    @include tablette-only {
+        margin-top: 50px;
         flex-direction: row; /* Mise en ligne des liens */
         justify-content: flex-end; 
         padding: 50px;
         width: 100%;
         & a {
             margin-bottom: 0;
+            flex-grow: 1;
         }
         & p {
-            margin: 0 50px 0 50px;
+            margin-left: 10px;
+            margin-bottom: 0;
+        }
+        & i {
+            margin-right: 5px;
         }
         /* Positionnement des liens */
         & .logo__footer {
@@ -46,7 +52,22 @@ footer {
             order: 1;
             flex-direction: row; /* Mise en ligne des liens */
             align-items: center;
+            gap: 14px;
+            flex-grow: 1;
+        }
+    }
+    @include desktop-only {
+        margin-bottom: 0;
+        & a {
+            flex-grow: 0;
+        }
+        & p {
+            margin: 0 50px 0 50px;
+        }
+        /* Positionnement des liens */
+        & .nav__footer {
             gap: 40px;
+            flex-grow: 0;
         }
     }
 }

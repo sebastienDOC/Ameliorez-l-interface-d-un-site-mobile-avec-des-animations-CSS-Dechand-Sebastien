@@ -36,13 +36,19 @@
 /* Explication fonctionnement du site */
 .fonctionnement {
     background: $white;
+    @include tablette-only {
+        & h2 {
+            margin: 0 5%;
+        }
+    }
     /* Mise en colonne des éléments */
     &__flex {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        gap: 30px;
         background: $white;
-        padding: 0 0 50px 0;
+        padding: 0 20px 50px 20px;
     }
     /* Elements du fonctionnement du site*/
     &__btn {
@@ -53,8 +59,10 @@
         align-items: center;
         border-radius: 25px;
         box-shadow: $shadow-cards;
+        width: 100%;
+        max-width: 450px;
+        min-width: 0;
         height: 70px;
-        margin: 0 10% 0 10%;
         &__flex {
             width: 100%;
             display: flex;
@@ -66,6 +74,9 @@
             > .fonctionnement__btn__flex .fonctionnement__icone {
                 color: $color-primary;
             }
+        }
+        @include tablette-only {
+            width: 450px;
         }
     }
     /* Choisir / Composer / Déguster */
@@ -112,12 +123,24 @@
 /* Mise en ligne des restaurants */
 .restaurants {
     margin-bottom: 50px;
-    @include desktop-only {
-        padding-left: 14%;
-        margin-bottom: 80px;
+    @include tablette-only {
+        margin: 0 5%;
         &__flex {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
+            }
+            & a {
+                flex-grow: 1;
+            }
+    }
+    @include desktop-only {
+        padding-left: 14%;
+        margin: 0 0 80px 0;
+        &__flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
             overflow: auto;
             scrollbar-width: thin;
             padding-bottom: 20px;
@@ -186,10 +209,8 @@
             width: 20%;
             position: relative;
             cursor: pointer;
-            @include desktop-only {
-                &:hover > .heart-full {
-                    animation: like 0.5s ease forwards;
-                }
+            &:hover > .heart-full {
+                animation: like 0.5s ease forwards;
             }
             & i {
                 display: flex;
@@ -211,9 +232,13 @@
             }
         }
     }
-        @include desktop-only {
-            width: 335px;
-        }
+    @include tablette-only {
+        min-width: 300px;
+    }
+    @include desktop-only {
+        width: 335px;
+        margin: 0 40px 20px 0;
+    }
 }
 
 /* Loader */
