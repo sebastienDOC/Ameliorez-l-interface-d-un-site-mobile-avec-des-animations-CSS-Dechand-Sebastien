@@ -202,6 +202,11 @@
             width: 20%;
             position: relative;
             cursor: pointer;
+            @include desktop-only {
+                &:hover > .heart-full {
+                    animation: like 0.5s ease forwards;
+                }
+            }
             & i {
                 display: flex;
                 justify-content: center;
@@ -219,14 +224,6 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 transform-origin: bottom;
-                &:active {
-                    animation: like 0.5s ease forwards;
-                }
-                @include desktop-only {
-                    &:hover {
-                        animation: like 0.5s ease forwards;
-                    }
-                }
             }
         }
     }

@@ -497,6 +497,11 @@ footer i {
   cursor: pointer;
   /* Coeur plein couleur */
 }
+@media screen and (min-width: 1024px) {
+  .cards__txt__like:hover > .heart-full {
+    animation: like 0.5s ease forwards;
+  }
+}
 .cards__txt__like i {
   display: flex;
   justify-content: center;
@@ -513,14 +518,6 @@ footer i {
   background-clip: text;
   -webkit-background-clip: text;
   transform-origin: bottom;
-}
-.cards__txt__like .heart-full:active {
-  animation: like 0.5s ease forwards;
-}
-@media screen and (min-width: 1024px) {
-  .cards__txt__like .heart-full:hover {
-    animation: like 0.5s ease forwards;
-  }
 }
 @media screen and (min-width: 1024px) {
   .cards {
@@ -699,19 +696,12 @@ nav i {
   width: 100%;
   display: flex;
   /* Apparition de la div selection au survol du plat */
-  /* Décalage de l'intitulé et du prix au survol pour 
-  laisser place au sélecteur */
 }
 .entrees .menu__content:hover .menu__selection,
 .plats .menu__content:hover .menu__selection,
 .desserts .menu__content:hover .menu__selection {
   width: 60px;
   animation: apparition-check 0.5s ease-in-out forwards;
-}
-.entrees .menu__content:hover .menu__gauche,
-.plats .menu__content:hover .menu__gauche,
-.desserts .menu__content:hover .menu__gauche {
-  width: calc(100% - 60px);
 }
 .entrees .menu__gauche,
 .plats .menu__gauche,

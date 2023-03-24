@@ -100,11 +100,6 @@ nav {
                 width: 60px;
                 animation: apparition-check 0.5s ease-in-out forwards;
             }
-            /* Décalage de l'intitulé et du prix au survol pour 
-            laisser place au sélecteur */
-            &:hover .menu__gauche {
-                width: calc(100% - 60px);
-              }
         }
         &__gauche {
             display: flex;
