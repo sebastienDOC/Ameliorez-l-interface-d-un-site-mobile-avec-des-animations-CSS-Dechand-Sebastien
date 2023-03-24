@@ -330,8 +330,6 @@ footer i {
 /* Explication fonctionnement du site */
 .fonctionnement {
   background: #fff;
-  position: relative;
-  z-index: -1;
   /* Mise en colonne des éléments */
   /* Elements du fonctionnement du site*/
   /* Choisir / Composer / Déguster */
@@ -346,6 +344,7 @@ footer i {
   padding: 0 0 50px 0;
 }
 .fonctionnement__btn {
+  z-index: 2;
   background: #F6F6F6;
   display: flex;
   flex-direction: row;
@@ -355,13 +354,20 @@ footer i {
   height: 70px;
   margin: 0 10% 0 10%;
 }
-.fonctionnement__btn#deguster {
+.fonctionnement__btn__flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.fonctionnement__btn:hover {
+  cursor: pointer;
   background: #F5EDFF;
+}
+.fonctionnement__btn:hover > .fonctionnement__btn__flex .fonctionnement__icone {
+  color: #9356DC;
 }
 .fonctionnement__txt {
   font-weight: 500;
-  position: absolute;
-  left: 30%;
 }
 .fonctionnement__number {
   display: flex;
@@ -378,11 +384,7 @@ footer i {
 }
 .fonctionnement__icone {
   color: #7e7e7e;
-  position: absolute;
-  left: 20%;
-}
-.fonctionnement__icone#store {
-  color: #9356DC;
+  padding-right: 10px;
 }
 @media screen and (min-width: 1024px) {
   .fonctionnement {
@@ -400,20 +402,6 @@ footer i {
   .fonctionnement__btn {
     width: 100%;
     margin: 0;
-  }
-  .fonctionnement__txt {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 0 20px;
-    margin: auto;
-    text-align: center;
-  }
-  .fonctionnement__icone {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding-left: 10px;
   }
 }
 

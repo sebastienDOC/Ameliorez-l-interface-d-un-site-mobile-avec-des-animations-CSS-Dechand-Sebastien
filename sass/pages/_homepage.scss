@@ -36,8 +36,6 @@
 /* Explication fonctionnement du site */
 .fonctionnement {
     background: $white;
-    position: relative;
-    z-index: -1;
     /* Mise en colonne des éléments */
     &__flex {
         display: flex;
@@ -48,6 +46,7 @@
     }
     /* Elements du fonctionnement du site*/
     &__btn {
+        z-index: 2;
         background: $color-fct;
         display: flex;
         flex-direction: row;
@@ -56,15 +55,22 @@
         box-shadow: $shadow-cards;
         height: 70px;
         margin: 0 10% 0 10%;
-        &#deguster {
-            background: #F5EDFF;
+        &__flex {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        &:hover {
+            cursor: pointer;
+            background: $color-hover;
+            > .fonctionnement__btn__flex .fonctionnement__icone {
+                color: $color-primary;
+            }
         }
     }
     /* Choisir / Composer / Déguster */
     &__txt {
         font-weight: $w-txt;
-        position: absolute;
-        left: 30%;
     }
     /* Chiffre entouré */
     &__number {
@@ -83,11 +89,7 @@
     /* Icone de l'élément */
     &__icone {
         color: $color-icone;
-        position: absolute;
-        left: 20%;
-        &#store {
-            color: $color-primary;
-        }
+        padding-right: 10px;
     }
     @include desktop-only{
         padding: 0 14% 80px 14%;
@@ -103,20 +105,6 @@
         &__btn {
             width: 100%;
             margin: 0;
-        }
-        &__txt {
-            position: relative;
-            top: 0;
-            left: 0;
-            padding: 0 20px;
-            margin: auto;
-            text-align: center;
-        }
-        &__icone{
-            position: relative;
-            top: 0;
-            left: 0;
-            padding-left: 10px;
         }
     }
 }
