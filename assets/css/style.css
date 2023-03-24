@@ -116,6 +116,8 @@ body {
   font-family: "Roboto", sans-serif;
   background: rgba(210, 210, 210, 0.1);
   font-weight: 300;
+}
+body .hide {
   animation: 3s hide-body 1 forwards;
 }
 

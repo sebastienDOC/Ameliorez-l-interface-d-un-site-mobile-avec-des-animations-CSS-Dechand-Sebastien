@@ -9,7 +9,9 @@ body {
     font-family: $font-txt;
     background: $color-bg;
     font-weight: $w-p;
-    animation: 3s hide-body 1 forwards;
+    & .hide {
+        animation: 3s hide-body 1 forwards;
+    }
 }
 
 a {
