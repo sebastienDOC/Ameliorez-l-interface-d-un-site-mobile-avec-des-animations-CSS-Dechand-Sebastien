@@ -2,14 +2,13 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     font-size: $size-txt;
     font-family: $font-txt;
     background: $color-bg;
     font-weight: $w-p;
-    & .hide {
+    &.hide {
         animation: 3s hide-body 1 forwards;
     }
 }

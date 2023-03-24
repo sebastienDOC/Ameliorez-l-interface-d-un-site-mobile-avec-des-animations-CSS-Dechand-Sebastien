@@ -117,7 +117,7 @@ body {
   background: rgba(210, 210, 210, 0.1);
   font-weight: 300;
 }
-body .hide {
+body.hide {
   animation: 3s hide-body 1 forwards;
 }
 
@@ -477,8 +477,6 @@ footer i {
     margin: 0 0 80px 0;
   }
   .restaurants__flex {
-    display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     overflow: auto;
     scrollbar-width: thin;
@@ -547,7 +545,6 @@ footer i {
   justify-content: center;
   align-items: center;
   width: 20%;
-  position: relative;
   cursor: pointer;
   /* Coeur plein couleur */
 }
@@ -587,12 +584,11 @@ footer i {
 .loader {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   animation: 3s hide 1 forwards;
-  margin: auto;
   opacity: 0;
 }
 .loader::before {
@@ -602,21 +598,24 @@ footer i {
   height: 100%;
   z-index: 1;
   background: white;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .loader__food {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #9356DC;
   letter-spacing: 50px;
   animation: flash 1.5s ease-in-out infinite;
-  position: relative;
   z-index: 2;
+  position: relative;
+  top: 350px;
 }
 .loader__food i {
   max-width: 60px;
   padding: 10%;
+}
+@media screen and (min-width: 768px) {
+  .loader__food {
+    bottom: 15%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .loader__food {
