@@ -373,8 +373,8 @@ footer i {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
+  min-width: 25px;
+  min-height: 25px;
   background: #9356DC;
   color: white;
   border-radius: 50%;
