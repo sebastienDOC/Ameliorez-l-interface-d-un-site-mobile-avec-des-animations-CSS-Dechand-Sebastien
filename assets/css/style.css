@@ -414,6 +414,8 @@ footer i {
     display: flex;
     flex-direction: row;
     overflow: auto;
+    scrollbar-width: thin;
+    padding-bottom: 20px;
   }
 }
 
