@@ -122,9 +122,10 @@
 
 /* Mise en ligne des restaurants */
 .restaurants {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     @include tablette-only {
         margin: 0 5%;
+        padding-bottom: 40px;
         &__flex {
             display: flex;
             flex-direction: row;
