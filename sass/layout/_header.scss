@@ -41,25 +41,14 @@ nav {
         outline: none;
         text-align: center;
         z-index: 1;
+        /* Pointeur */
         &::placeholder {
             color: black;
             opacity: 1;  
-            font-family: $font-txt;
             font-weight: $w-txt;
+            font-family: $font-txt, "FontAwesome";
         }
-    }
-    /* Pointeur */
-    &__icone{
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        position: relative;
-        left: 10%;
-        z-index: 2;
-        @include desktop-only {
-            left: 23%;
-        }
-    }
+    } 
 }
 
 /* Image du restaurant */
