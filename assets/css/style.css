@@ -190,14 +190,14 @@ nav i {
 }
 
 /* Barre de recherche de la ville */
-.barre {
+.barreRecherche {
   display: flex;
   flex-direction: row;
   border-top: 2px solid #d2d2d2;
   background: #EAEAEA;
   justify-content: center;
 }
-.barre input {
+.barreRecherche input {
   background: #EAEAEA;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -210,7 +210,7 @@ nav i {
   z-index: 1;
   /* Pointeur */
 }
-.barre input::placeholder {
+.barreRecherche input::placeholder {
   color: black;
   opacity: 1;
   font-weight: 500;
