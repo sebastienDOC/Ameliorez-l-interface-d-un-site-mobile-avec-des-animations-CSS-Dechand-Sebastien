@@ -454,11 +454,13 @@ footer i {
   }
   .fonctionnement h2 {
     margin: 0;
+    padding-left: 5px;
   }
   .fonctionnement__flex {
     flex-direction: row;
     gap: 3%;
     padding: 0;
+    padding-left: 18px;
   }
   .fonctionnement__btn {
     width: 100%;
@@ -489,11 +491,14 @@ footer i {
     padding-left: 14%;
     margin: 0 0 80px 0;
   }
+  .restaurants h2 {
+    padding-left: 5px;
+  }
   .restaurants__flex {
     flex-wrap: nowrap;
-    overflow: auto;
     scrollbar-width: thin;
-    padding-bottom: 20px;
+    overflow-x: auto;
+    padding: 0 0 20px 5px;
   }
 }
 
