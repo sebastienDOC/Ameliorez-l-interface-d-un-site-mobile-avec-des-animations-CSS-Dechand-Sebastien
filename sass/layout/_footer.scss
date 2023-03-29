@@ -4,7 +4,7 @@ footer {
     background: $color-footer;
     color: $white;
     padding: 25px 0 30px 25px;
-    &.footer__menu {
+    &.footer__menu {       /* Déplacement footer vers le haut sur les pages restaurant */
         transform: translateY(200px);
         @include tablette-only {
             transform: translateY(275px);
@@ -13,8 +13,7 @@ footer {
             transform: translateY(350px);
         }
     }
-    /* Mise en colonne des liens */
-    & .nav__footer {
+    & .nav__footer {     /* Mise en colonne des liens */
         display: flex;
         flex-direction: column;
     }
@@ -25,8 +24,7 @@ footer {
             font-weight: $w-title; 
         }
     }
-    /* Logo footer */ 
-    & p {
+    & p {     /* Logo footer */ 
         margin: 0 0 15px 0;
         font-family: $font-title;
         font-size: $size-logo;
@@ -51,12 +49,10 @@ footer {
         & i {
             margin-right: 5px;
         }
-        /* Positionnement des liens */
-        & .logo__footer {
+        & .logo__footer {         /* Positionnement des liens */
             order: 2;
         }
-        /* Positionnement des liens */
-        & .nav__footer {
+        & .nav__footer {         /* Positionnement des liens */
             order: 1;
             flex-direction: row; /* Mise en ligne des liens */
             align-items: center;
@@ -71,8 +67,7 @@ footer {
         & p {
             margin: 0 50px 0 50px;
         }
-        /* Positionnement des liens */
-        & .nav__footer {
+        & .nav__footer {         /* Positionnement des liens */
             gap: 40px;
             flex-grow: 0;
         }

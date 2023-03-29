@@ -41,8 +41,7 @@ nav {
         outline: none;
         text-align: center;
         z-index: 1;
-        /* Pointeur */
-        &::placeholder {
+        &::placeholder {         /* Pointeur */
             color: black;
             opacity: 1;  
             font-weight: $w-txt;

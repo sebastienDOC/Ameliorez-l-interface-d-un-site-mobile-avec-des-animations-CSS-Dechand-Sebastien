@@ -1,5 +1,5 @@
 /* Nom du restaurant */
-.nom {
+.nom {      
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -19,15 +19,13 @@
 }
 
 /* Favoris/Like */
-.cards__txt__like {
+.cards__txt__like {         
     & input {
         display: none;
-        /* Mettre en favoris au clic */
-        &:checked + label .heart-full {
+        &:checked + label .heart-full {              /* Mettre en favoris au clic */
             animation: like 1s ease-in-out forwards;
         }
-        /* Retirer des favoris au clic */
-        &:not(:checked) + label .heart-full {
+        &:not(:checked) + label .heart-full {        /* Retirer des favoris au clic */
             animation: dislike 1s forwards;
         }
     }
@@ -46,7 +44,7 @@
     border-radius: 50px 50px 0 0;
     padding: 30px 0 40px 0;
     z-index: 2;
-    transform: translateY(200px);
+    transform: translateY(200px); /* Déplacement vers le haut du menu */
     & h2 {
         padding: 0;
         border-bottom: 3px solid $color-tertiary;
@@ -55,12 +53,12 @@
     @include tablette-only {
         width: 75%;
         margin: 0 12.5%;
-        transform: translateY(275px);
+        transform: translateY(275px); /* Déplacement vers le haut du menu */
     }
     @include desktop-only {
         width: 75%;
         margin: 0 12.5%;
-        transform: translateY(350px);
+        transform: translateY(350px); /* Déplacement vers le haut du menu */
     }
 
 }
@@ -69,8 +67,7 @@
 .plats,
 .desserts {
     padding: 0 0 40px 15px;
-    /* Elements du menu */
-    & .menu {
+    & .menu {           /* Elements du menu */
         display: flex;
         justify-content: space-between;
         box-shadow: $shadow-cards;
@@ -83,8 +80,7 @@
         &__content {
             width: 100%;
             display: flex;
-            /* Apparition de la div selection au survol du plat */
-            &:hover .menu__selection {
+            &:hover .menu__selection {            /* Apparition de la div selection au survol du plat */
                 width: 60px;
                 animation: apparition-check 0.5s ease-in-out forwards;
             }
@@ -98,9 +94,8 @@
             height: 100%;
             width: 100%;
         }
-        /* Intitulé du plat */
-        &__title {
-            & h3 {
+        &__title {        
+            & h3 {         /* Intitulé du plat */
                 font-size: $size-logo;
                 margin: 0 0 5px 0;
             }
@@ -109,8 +104,7 @@
             font-size: $size-p-menu;
             display: inline-flex;
             justify-content: space-between;
-            /* Accompagnement du plat */
-            &__title {
+            &__title {            /* Accompagnement du plat */
                 margin: 0;
                 overflow: hidden; /* Texte qui dépasse est caché */
                 text-overflow: ellipsis; /* Texte caché sous des "..." */
@@ -118,8 +112,7 @@
                 width: 80%;
                 height: 20px;
             }
-            /* Prix du plat */
-            &__prix {
+            &__prix {            /* Prix du plat */
                 position: absolute;
                 right: 5%;
                 font-weight: $w-title;
@@ -130,8 +123,7 @@
             margin: 0;
             padding: 0;
         }
-        /* Sélection du plat */
-        &__selection {
+        &__selection {        /* Sélection du plat */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -145,15 +137,13 @@
             cursor: pointer;
             & input {
                 display: none;
-                /* Sélectionner le plat avec un clic sur le plus */ 
-                &:checked + label .menu__selection__plus {
+                &:checked + label .menu__selection__plus {         /* Sélectionner le plat avec un clic sur le plus */ 
                     display: none;
                 }
                 &:not(:checked) + label .menu__selection__plus {
                     display: flex;
                 }
-                /* Retirer le plat avec un clic sur le check */
-                &:checked + label .menu__selection__check {
+                &:checked + label .menu__selection__check {         /* Retirer le plat avec un clic sur le check */
                     display: flex;
                 }
                 &:not(:checked) + label .menu__selection__check {
@@ -167,8 +157,7 @@
                 background: transparent;
                 cursor: pointer;
             }
-            /* Signe + au moment de la sélection */
-            &__plus {
+            &__plus {            /* Signe + au moment de la sélection */
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -177,8 +166,7 @@
                 width: 25px;
                 height: 25px;
             }
-            /* Signe check une fois le plat sélectionné */
-            &__check {
+            &__check {            /* Signe check une fois le plat sélectionné */
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -188,9 +176,8 @@
                 height: 25px;
             }
         }
-        /* Animation progressive des plats */
-        &.anim {
-            &__1 {
+        &.anim {     
+            &__1 {      /* Animation progressive des plats */
                 animation-delay: 0.2s;
             }
             &__2 {
@@ -233,7 +220,7 @@
 }
 
 /* Bouton centré */
-.bouton {
+.bouton {       
     margin: auto;
     width: 220px;
     height: 50px;

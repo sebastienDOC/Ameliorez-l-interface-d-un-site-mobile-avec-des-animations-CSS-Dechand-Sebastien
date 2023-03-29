@@ -104,8 +104,6 @@
     transform: scale(0);
   }
 }
-/* MQ responsive desktop */
-/* MQ responsive tablette */
 * {
   box-sizing: border-box;
 }
@@ -208,9 +206,8 @@ nav i {
   outline: none;
   text-align: center;
   z-index: 1;
-  /* Pointeur */
 }
-.barreRecherche input::placeholder {
+.barreRecherche input::placeholder { /* Pointeur */
   color: black;
   opacity: 1;
   font-weight: 500;
@@ -242,10 +239,8 @@ footer {
   background: #353535;
   color: #fff;
   padding: 25px 0 30px 25px;
-  /* Mise en colonne des liens */
-  /* Logo footer */
 }
-footer.footer__menu {
+footer.footer__menu { /* Déplacement footer vers le haut sur les pages restaurant */
   transform: translateY(200px);
 }
 @media screen and (min-width: 768px) {
@@ -258,7 +253,7 @@ footer.footer__menu {
     transform: translateY(350px);
   }
 }
-footer .nav__footer {
+footer .nav__footer { /* Mise en colonne des liens */
   display: flex;
   flex-direction: column;
 }
@@ -269,7 +264,7 @@ footer a {
 footer a:hover {
   font-weight: 700;
 }
-footer p {
+footer p { /* Logo footer */
   margin: 0 0 15px 0;
   font-family: "Shrikhand", cursive;
   font-size: 18px;
@@ -284,8 +279,6 @@ footer i {
     justify-content: flex-end;
     padding: 50px;
     width: 100%;
-    /* Positionnement des liens */
-    /* Positionnement des liens */
   }
   footer a {
     margin-bottom: 0;
@@ -298,10 +291,10 @@ footer i {
   footer i {
     margin-right: 5px;
   }
-  footer .logo__footer {
+  footer .logo__footer { /* Positionnement des liens */
     order: 2;
   }
-  footer .nav__footer {
+  footer .nav__footer { /* Positionnement des liens */
     order: 1;
     flex-direction: row; /* Mise en ligne des liens */
     align-items: center;
@@ -310,22 +303,19 @@ footer i {
   }
 }
 @media screen and (min-width: 1024px) {
-  footer {
-    /* Positionnement des liens */
-  }
   footer a {
     flex-grow: 0;
   }
   footer p {
     margin: 0 50px 0 50px;
   }
-  footer .nav__footer {
+  footer .nav__footer { /* Positionnement des liens */
     gap: 40px;
     flex-grow: 0;
   }
 }
 
-/* Conteneur général */
+/* Conteneur page d'acceuil */
 .container__index h2 {
   font-size: 24px;
   font-weight: 700;
@@ -365,18 +355,13 @@ footer i {
 /* Explication fonctionnement du site */
 .fonctionnement {
   background: #fff;
-  /* Mise en colonne des éléments */
-  /* Elements du fonctionnement du site*/
-  /* Choisir / Composer / Déguster */
-  /* Chiffre entouré */
-  /* Icone de l'élément */
 }
 @media screen and (min-width: 768px) {
   .fonctionnement h2 {
     margin: 0 5%;
   }
 }
-.fonctionnement__flex {
+.fonctionnement__flex { /* Mise en colonne des éléments */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,7 +369,7 @@ footer i {
   background: #fff;
   padding: 0 20px 50px 20px;
 }
-.fonctionnement__btn {
+.fonctionnement__btn { /* Elements du fonctionnement du site*/
   z-index: 2;
   background: #F6F6F6;
   display: flex;
@@ -406,7 +391,7 @@ footer i {
   cursor: pointer;
   background: #F5EDFF;
 }
-.fonctionnement__btn:hover > .fonctionnement__btn__flex .fonctionnement__icone {
+.fonctionnement__btn:hover > .fonctionnement__btn__flex .fonctionnement__icone { /* Coeur se rempli progressivement au passage sur la div */
   color: #9356DC;
 }
 @media screen and (min-width: 768px) {
@@ -414,10 +399,10 @@ footer i {
     width: 450px;
   }
 }
-.fonctionnement__txt {
+.fonctionnement__txt { /* Choisir / Composer / Déguster */
   font-weight: 500;
 }
-.fonctionnement__number {
+.fonctionnement__number { /* Chiffre entouré */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -430,20 +415,19 @@ footer i {
   left: 50%;
   transform: translateX(-50%);
 }
-.fonctionnement__icone {
+.fonctionnement__icone { /* Icone de l'élément */
   color: #7e7e7e;
   padding-right: 10px;
 }
 @media screen and (min-width: 1024px) {
   .fonctionnement {
     padding: 0 14% 80px 14%;
-    /* Mise en ligne des éléments */
   }
   .fonctionnement h2 {
     margin: 0;
     padding-left: 5px;
   }
-  .fonctionnement__flex {
+  .fonctionnement__flex { /* Mise en ligne des éléments */
     flex-direction: row;
     gap: 3%;
     padding: 0;
@@ -484,7 +468,7 @@ footer i {
   .restaurants__flex {
     flex-wrap: nowrap;
     scrollbar-width: thin;
-    overflow-x: auto;
+    overflow-x: auto; /* Scrollbar horizontale sous les cards */
     padding: 0 0 20px 5px;
   }
 }
@@ -496,11 +480,8 @@ footer i {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   height: 251px;
   position: relative;
-  /* Encart "Nouveau" */
-  /* Image du restaurant */
-  /* Nom et localisation du restaurant*/
 }
-.cards__new {
+.cards__new { /* Encart "Nouveau" */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -516,7 +497,7 @@ footer i {
   top: 5%;
   left: 76%;
 }
-.cards__img {
+.cards__img { /* Image du restaurant */
   padding: 0;
   height: 70%;
 }
@@ -526,10 +507,9 @@ footer i {
   height: 100%;
   object-fit: cover;
 }
-.cards__txt {
+.cards__txt { /* Nom et localisation du restaurant*/
   display: flex;
   height: 30%;
-  /* Favoris */
 }
 .cards__txt__name {
   width: 80%;
@@ -544,14 +524,13 @@ footer i {
   margin: 0;
   padding: 0 0 0 10px;
 }
-.cards__txt__like {
+.cards__txt__like { /* Favoris */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 20%;
   cursor: pointer;
-  /* Coeur plein couleur */
 }
 .cards__txt__like:hover > .heart-full {
   animation: like 0.5s ease forwards;
@@ -562,7 +541,7 @@ footer i {
   align-items: center;
   height: 24px;
 }
-.cards__txt__like .heart-full {
+.cards__txt__like .heart-full { /* Coeur plein couleur */
   opacity: 0;
   position: absolute;
   width: 24px;
@@ -671,13 +650,11 @@ footer i {
 /* Favoris/Like */
 .cards__txt__like input {
   display: none;
-  /* Mettre en favoris au clic */
-  /* Retirer des favoris au clic */
 }
-.cards__txt__like input:checked + label .heart-full {
+.cards__txt__like input:checked + label .heart-full { /* Mettre en favoris au clic */
   animation: like 1s ease-in-out forwards;
 }
-.cards__txt__like input:not(:checked) + label .heart-full {
+.cards__txt__like input:not(:checked) + label .heart-full { /* Retirer des favoris au clic */
   animation: dislike 1s forwards;
 }
 .cards__txt__like label {
@@ -694,7 +671,7 @@ footer i {
   border-radius: 50px 50px 0 0;
   padding: 30px 0 40px 0;
   z-index: 2;
-  transform: translateY(200px);
+  transform: translateY(200px); /* Déplacement vers le haut du menu */
 }
 .main__menu h2 {
   padding: 0;
@@ -705,14 +682,14 @@ footer i {
   .main__menu {
     width: 75%;
     margin: 0 12.5%;
-    transform: translateY(275px);
+    transform: translateY(275px); /* Déplacement vers le haut du menu */
   }
 }
 @media screen and (min-width: 1024px) {
   .main__menu {
     width: 75%;
     margin: 0 12.5%;
-    transform: translateY(350px);
+    transform: translateY(350px); /* Déplacement vers le haut du menu */
   }
 }
 
@@ -720,11 +697,10 @@ footer i {
 .plats,
 .desserts {
   padding: 0 0 40px 15px;
-  /* Elements du menu */
 }
 .entrees .menu,
 .plats .menu,
-.desserts .menu {
+.desserts .menu { /* Elements du menu */
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -734,20 +710,16 @@ footer i {
   opacity: 0;
   overflow: hidden;
   animation: apparition-menu 2s ease 1 forwards;
-  /* Intitulé du plat */
-  /* Sélection du plat */
-  /* Animation progressive des plats */
 }
 .entrees .menu__content,
 .plats .menu__content,
 .desserts .menu__content {
   width: 100%;
   display: flex;
-  /* Apparition de la div selection au survol du plat */
 }
 .entrees .menu__content:hover .menu__selection,
 .plats .menu__content:hover .menu__selection,
-.desserts .menu__content:hover .menu__selection {
+.desserts .menu__content:hover .menu__selection { /* Apparition de la div selection au survol du plat */
   width: 60px;
   animation: apparition-check 0.5s ease-in-out forwards;
 }
@@ -764,7 +736,7 @@ footer i {
 }
 .entrees .menu__title h3,
 .plats .menu__title h3,
-.desserts .menu__title h3 {
+.desserts .menu__title h3 { /* Intitulé du plat */
   font-size: 18px;
   margin: 0 0 5px 0;
 }
@@ -774,12 +746,10 @@ footer i {
   font-size: 15px;
   display: inline-flex;
   justify-content: space-between;
-  /* Accompagnement du plat */
-  /* Prix du plat */
 }
 .entrees .menu__sub__title,
 .plats .menu__sub__title,
-.desserts .menu__sub__title {
+.desserts .menu__sub__title { /* Accompagnement du plat */
   margin: 0;
   overflow: hidden; /* Texte qui dépasse est caché */
   text-overflow: ellipsis; /* Texte caché sous des "..." */
@@ -789,7 +759,7 @@ footer i {
 }
 .entrees .menu__sub__prix,
 .plats .menu__sub__prix,
-.desserts .menu__sub__prix {
+.desserts .menu__sub__prix { /* Prix du plat */
   position: absolute;
   right: 5%;
   font-weight: 700;
@@ -803,7 +773,7 @@ footer i {
 }
 .entrees .menu__selection,
 .plats .menu__selection,
-.desserts .menu__selection {
+.desserts .menu__selection { /* Sélection du plat */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -815,19 +785,15 @@ footer i {
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-  /* Signe + au moment de la sélection */
-  /* Signe check une fois le plat sélectionné */
 }
 .entrees .menu__selection input,
 .plats .menu__selection input,
 .desserts .menu__selection input {
   display: none;
-  /* Sélectionner le plat avec un clic sur le plus */
-  /* Retirer le plat avec un clic sur le check */
 }
 .entrees .menu__selection input:checked + label .menu__selection__plus,
 .plats .menu__selection input:checked + label .menu__selection__plus,
-.desserts .menu__selection input:checked + label .menu__selection__plus {
+.desserts .menu__selection input:checked + label .menu__selection__plus { /* Sélectionner le plat avec un clic sur le plus */
   display: none;
 }
 .entrees .menu__selection input:not(:checked) + label .menu__selection__plus,
@@ -837,7 +803,7 @@ footer i {
 }
 .entrees .menu__selection input:checked + label .menu__selection__check,
 .plats .menu__selection input:checked + label .menu__selection__check,
-.desserts .menu__selection input:checked + label .menu__selection__check {
+.desserts .menu__selection input:checked + label .menu__selection__check { /* Retirer le plat avec un clic sur le check */
   display: flex;
 }
 .entrees .menu__selection input:not(:checked) + label .menu__selection__check,
@@ -856,7 +822,7 @@ footer i {
 }
 .entrees .menu__selection__plus,
 .plats .menu__selection__plus,
-.desserts .menu__selection__plus {
+.desserts .menu__selection__plus { /* Signe + au moment de la sélection */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -867,7 +833,7 @@ footer i {
 }
 .entrees .menu__selection__check,
 .plats .menu__selection__check,
-.desserts .menu__selection__check {
+.desserts .menu__selection__check { /* Signe check une fois le plat sélectionné */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -878,7 +844,7 @@ footer i {
 }
 .entrees .menu.anim__1,
 .plats .menu.anim__1,
-.desserts .menu.anim__1 {
+.desserts .menu.anim__1 { /* Animation progressive des plats */
   animation-delay: 0.2s;
 }
 .entrees .menu.anim__2,

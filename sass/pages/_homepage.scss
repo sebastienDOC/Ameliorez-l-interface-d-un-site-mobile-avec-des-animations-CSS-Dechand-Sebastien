@@ -1,4 +1,4 @@
-/* Conteneur général */
+/* Conteneur page d'acceuil */
 .container__index {
     & h2 {
         font-size: $size-subtitle;
@@ -34,15 +34,14 @@
 }
 
 /* Explication fonctionnement du site */
-.fonctionnement {
+.fonctionnement {   
     background: $white;
     @include tablette-only {
         & h2 {
             margin: 0 5%;
         }
     }
-    /* Mise en colonne des éléments */
-    &__flex {
+    &__flex {     /* Mise en colonne des éléments */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -50,8 +49,7 @@
         background: $white;
         padding: 0 20px 50px 20px;
     }
-    /* Elements du fonctionnement du site*/
-    &__btn {
+    &__btn {    /* Elements du fonctionnement du site*/
         z-index: 2;
         background: $color-fct;
         display: flex;
@@ -71,7 +69,7 @@
         &:hover {
             cursor: pointer;
             background: $color-hover;
-            > .fonctionnement__btn__flex .fonctionnement__icone {
+            > .fonctionnement__btn__flex .fonctionnement__icone { /* Coeur se rempli progressivement au passage sur la div */
                 color: $color-primary;
             }
         }
@@ -79,12 +77,10 @@
             width: 450px;
         }
     }
-    /* Choisir / Composer / Déguster */
-    &__txt {
+    &__txt {     /* Choisir / Composer / Déguster */
         font-weight: $w-txt;
     }
-    /* Chiffre entouré */
-    &__number {
+    &__number {    /* Chiffre entouré */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -97,8 +93,7 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    /* Icone de l'élément */
-    &__icone {
+    &__icone {     /* Icone de l'élément */
         color: $color-icone;
         padding-right: 10px;
     }
@@ -108,8 +103,7 @@
             margin: 0;
             padding-left: 5px;
         }
-        /* Mise en ligne des éléments */
-        &__flex {
+        &__flex {         /* Mise en ligne des éléments */
             flex-direction: row;
             gap: 3%;
             padding: 0;
@@ -123,7 +117,7 @@
 }
 
 /* Mise en ligne des restaurants */
-.restaurants {
+.restaurants {          
     padding-bottom: 50px;
     @include tablette-only {
         margin: 0 5%;
@@ -146,21 +140,20 @@
         &__flex {
             flex-wrap: nowrap;
             scrollbar-width: thin;
-            overflow-x: auto;
+            overflow-x: auto;  /* Scrollbar horizontale sous les cards */
             padding: 0 0 20px 5px;
         }
     }
 }
 
 /* Différents restaurants */
-.cards {
+.cards {        
     border-radius: 20px;
     margin: 0 20px 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     height: 251px;
     position: relative;
-    /* Encart "Nouveau" */
-    &__new {
+    &__new {    /* Encart "Nouveau" */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -176,8 +169,7 @@
         top: 5%;
         left: 76%;
     }
-    /* Image du restaurant */
-    &__img {
+    &__img {    /* Image du restaurant */
         padding: 0;
         height: 70%;
         & img {
@@ -187,8 +179,7 @@
             object-fit: cover;
         }
     }
-    /* Nom et localisation du restaurant*/
-    &__txt {
+    &__txt {     /* Nom et localisation du restaurant*/
         display: flex;
         height: 30%;
         &__name {
@@ -204,8 +195,7 @@
                 padding: 0 0 0 10px;
             }
         }
-        /* Favoris */
-        &__like {
+        &__like {        /* Favoris */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -221,8 +211,7 @@
                 align-items: center;
                 height: 24px;
             }
-            /* Coeur plein couleur */
-            & .heart-full {
+            & .heart-full {             /* Coeur plein couleur */
                 opacity: 0;
                 position: absolute;
                 width: 24px;
@@ -245,7 +234,7 @@
 }
 
 /* Loader */
-.loader {
+.loader {       
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -284,7 +273,7 @@
 }
 
 /* Décalage flash loader */
-.anim {
+.anim {         
     &-1 {
         animation-delay: 0.2s;
     }
