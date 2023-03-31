@@ -193,7 +193,7 @@ nav i {
   flex-direction: row;
   border-top: 2px solid #d2d2d2;
   background: #EAEAEA;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .barreRecherche input {
   background: #EAEAEA;
@@ -201,17 +201,41 @@ nav i {
   font-weight: 500;
   padding: 0;
   border: none;
-  width: 60%;
+  width: 55%;
   height: 50px;
   outline: none;
-  text-align: center;
+  text-align: left;
   z-index: 1;
 }
-.barreRecherche input::placeholder { /* Pointeur */
+@media screen and (min-width: 768px) {
+  .barreRecherche input {
+    width: 52%;
+  }
+}
+.barreRecherche input::placeholder {
   color: black;
   opacity: 1;
   font-weight: 500;
-  font-family: "Roboto", sans-serif, "FontAwesome";
+}
+.barreRecherche .dot { /* Pointeur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  position: absolute;
+  top: 9.5%;
+  left: 35%;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .barreRecherche .dot {
+    left: 42%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .barreRecherche .dot {
+    top: 10.7%;
+  }
 }
 
 /* Image du restaurant */
@@ -467,9 +491,6 @@ footer i {
   .restaurants h2 {
     padding-left: 5px;
   }
-  .restaurants__flex {
-    justify-content: space-between;
-  }
 }
 
 /* Différents restaurants */
@@ -562,7 +583,7 @@ footer i {
 }
 @media screen and (min-width: 1024px) {
   .cards {
-    max-width: 500px;
+    width: 48%;
   }
 }
 

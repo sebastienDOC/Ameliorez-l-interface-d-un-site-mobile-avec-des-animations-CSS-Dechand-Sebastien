@@ -29,25 +29,47 @@ nav {
     flex-direction: row;
     border-top: 2px solid $color-border;
     background: $color-search ;
-    justify-content: center;
+    justify-content: flex-end;
     & input {
         background: $color-search ;
         font-family: $font-txt;
         font-weight: $w-txt;
         padding: 0;
         border: none;
-        width: 60%;
+        width: 55%;
         height: 50px;
         outline: none;
-        text-align: center;
+        text-align: left;
         z-index: 1;
-        &::placeholder {         /* Pointeur */
+        @include tablette-only {
+            width: 52%;
+        }
+        @include desktop-only {
+            
+        }
+        &::placeholder {         
             color: black;
             opacity: 1;  
             font-weight: $w-txt;
-            font-family: $font-txt, "FontAwesome";
         }
     } 
+    & .dot {    /* Pointeur */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5%;
+        position: absolute;
+        top: 9.5%;
+        left: 35%;
+        z-index: 1;
+        @include tablette-only {
+            left: 42%;
+        }
+        @include desktop-only {
+            top: 10.7%;
+            
+        }
+    }  
 }
 
 /* Image du restaurant */
