@@ -38,7 +38,8 @@
     background: $white;
     @include tablette-only {
         & h2 {
-            margin: 0 5%;
+            padding-left: 0;
+            margin: 0 6%;
         }
     }
     &__flex {     /* Mise en colonne des éléments */
@@ -98,7 +99,7 @@
         padding-right: 10px;
     }
     @include desktop-only{
-        padding: 0 14% 80px 14%;
+        padding: 0 12% 80px 12%;
         & h2 {
             margin: 0;
             padding-left: 5px;
@@ -120,28 +121,26 @@
 .restaurants {          
     padding-bottom: 50px;
     @include tablette-only {
-        margin: 0 5%;
+        margin: 0 6%;
         padding-bottom: 40px;
+        & h2 {
+            padding-left: 0;
+        }
         &__flex {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            }
-            & a {
-                flex-grow: 1;
-            }
+            gap: 40px;
+        }
     }
     @include desktop-only {
-        padding-left: 14%;
+        padding: 0 12%;
         margin: 0 0 80px 0;
         & h2 {
             padding-left: 5px;
         }
         &__flex {
-            flex-wrap: nowrap;
-            scrollbar-width: thin;
-            overflow-x: auto;  /* Scrollbar horizontale sous les cards */
-            padding: 0 0 20px 5px;
+            justify-content: space-between;
         }
     }
 }
@@ -149,7 +148,7 @@
 /* Différents restaurants */
 .cards {        
     border-radius: 20px;
-    margin: 0 20px 20px 20px;
+    margin: 0px 20px 20px 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     height: 251px;
     position: relative;
@@ -224,12 +223,15 @@
             }
         }
     }
-    @include tablette-only {
-        min-width: 300px;
+    & a {
+        flex-grow: 1;
     }
-    @include desktop-only {
-        width: 335px;
-        margin: 0 40px 20px 0;
+    @include tablette-only {
+        width: 47%;
+        margin: 0;
+    }
+    @include desktop-only { 
+        max-width: 500px;
     }
 }
 
