@@ -209,7 +209,7 @@ nav i {
 }
 @media screen and (min-width: 768px) {
   .barreRecherche input {
-    width: 52%;
+    width: 53%;
   }
 }
 .barreRecherche input::placeholder {
@@ -491,6 +491,9 @@ footer i {
   .restaurants h2 {
     padding-left: 5px;
   }
+  .restaurants__flex {
+    justify-content: space-between;
+  }
 }
 
 /* Différents restaurants */
@@ -583,7 +586,7 @@ footer i {
 }
 @media screen and (min-width: 1024px) {
   .cards {
-    width: 48%;
+    width: 47%;
   }
 }
 
