@@ -510,15 +510,14 @@ footer i {
   justify-content: center;
   font-weight: 500;
   font-size: 14px;
-  width: 20%;
-  height: 30px;
+  padding: 5px 10px;
   background: #99E2D0;
   color: #008766;
   border-radius: 2px;
   z-index: 1;
   position: absolute;
   top: 5%;
-  left: 76%;
+  right: 15px;
 }
 .cards__img { /* Image du restaurant */
   padding: 0;

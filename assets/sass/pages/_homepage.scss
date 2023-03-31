@@ -158,15 +158,14 @@
         justify-content: center;
         font-weight: $w-txt;
         font-size: $size-new;
-        width: 20%;
-        height: 30px;
+        padding: 5px 10px;
         background: $color-tertiary;
         color: $color-new;
         border-radius: 2px;
         z-index: 1;
         position: absolute;
         top: 5%;
-        left: 76%;
+        right: 15px;
     }
     &__img {    /* Image du restaurant */
         padding: 0;
