@@ -223,7 +223,7 @@ nav i {
   align-items: center;
   width: 5%;
   position: absolute;
-  top: 9.5%;
+  top: 80px;
   left: 35%;
   z-index: 1;
 }
@@ -234,7 +234,7 @@ nav i {
 }
 @media screen and (min-width: 1024px) {
   .barreRecherche .dot {
-    top: 10.7%;
+    top: 90px;
   }
 }
 
