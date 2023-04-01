@@ -84,6 +84,9 @@
                 width: 60px;
                 animation: apparition-check 0.5s ease-in-out forwards;
             }
+            &:hover .menu__gauche {         /* Recul du menu gauche pour laisser place à la sélection */
+                width: calc(100% - 60px);
+              }
         }
         &__gauche {
             display: flex;
@@ -93,11 +96,15 @@
             padding-left: 12px;
             height: 100%;
             width: 100%;
+            transition: width 0.5s ease-out;
         }
         &__title {        
             & h3 {         /* Intitulé du plat */
                 font-size: $size-logo;
                 margin: 0 0 5px 0;
+                overflow: hidden; /* Texte qui dépasse est caché */
+                text-overflow: ellipsis; /* Texte caché sous des "..." */
+                white-space: nowrap; /* Pas de retour à la ligne */
             }
         }
         &__sub {

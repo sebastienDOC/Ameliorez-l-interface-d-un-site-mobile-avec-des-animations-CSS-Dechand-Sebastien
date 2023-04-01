@@ -75,7 +75,7 @@
 /* Apparition sélection de commande depuis la droite */
 @keyframes apparition-check {
   0% {
-    transform: translateX(2vh);
+    transform: translateX(10vh);
   }
   100% {
     transform: translateX(0);
@@ -748,6 +748,11 @@ footer i {
   width: 60px;
   animation: apparition-check 0.5s ease-in-out forwards;
 }
+.entrees .menu__content:hover .menu__gauche,
+.plats .menu__content:hover .menu__gauche,
+.desserts .menu__content:hover .menu__gauche { /* Recul du menu gauche pour laisser place à la sélection */
+  width: calc(100% - 60px);
+}
 .entrees .menu__gauche,
 .plats .menu__gauche,
 .desserts .menu__gauche {
@@ -758,12 +763,16 @@ footer i {
   padding-left: 12px;
   height: 100%;
   width: 100%;
+  transition: width 0.5s ease-out;
 }
 .entrees .menu__title h3,
 .plats .menu__title h3,
 .desserts .menu__title h3 { /* Intitulé du plat */
   font-size: 18px;
   margin: 0 0 5px 0;
+  overflow: hidden; /* Texte qui dépasse est caché */
+  text-overflow: ellipsis; /* Texte caché sous des "..." */
+  white-space: nowrap; /* Pas de retour à la ligne */
 }
 .entrees .menu__sub,
 .plats .menu__sub,
