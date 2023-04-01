@@ -817,7 +817,7 @@ footer i {
   height: 70px;
   width: 0;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-out;
   cursor: pointer;
 }
 .entrees .menu__selection input,
